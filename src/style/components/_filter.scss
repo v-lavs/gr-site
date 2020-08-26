@@ -1,5 +1,5 @@
 .filter-brand {
-  max-width: 550px;
+  width: 100%;
 
   .form {
     &__group {
@@ -12,6 +12,7 @@
     &__footer {
       padding-top: 32px;
       display: flex;
+      align-items: flex-end;
     }
 
     &__description {
@@ -51,5 +52,9 @@
     height: 100%;
     margin-bottom: 32px;
   }
+
+}
+
+@media all and (max-width: 520px) {
 
 }

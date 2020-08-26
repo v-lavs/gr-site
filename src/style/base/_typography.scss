@@ -51,13 +51,7 @@
 
 @include respond-to($xxs) {
   .text {
-    &_xl {
-      //font-size: 30px;
-    }
 
-    &_medium {
-      //font-size: 20px;
-    }
   }
   .title {
     //font-size: 36px;

@@ -85,10 +85,14 @@
     color: #4b4b4b;
     font-size: 22px;
     font-weight: 600;
-    margin-bottom: 50px;
-
+    border: 1px solid #00d550;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 42px;
+    padding-right: 37px;
+    margin-bottom: 12px;
     & > * {
-      margin-bottom: 25px;
+      margin-bottom: 12px;
     }
 
     .green-color {
@@ -99,11 +103,11 @@
   }
 
   .block__footer {
-    padding-top: 80px;
-    border: 1px solid #00d550;
-    border-radius: 6px;
-
-
+    padding-top: 62px;
+    margin-top: 50px;
+    .btn{
+      margin-top: 55px;
+    }
   }
 
   .financed {

@@ -7,13 +7,14 @@
   -webkit-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
+
   .container {
     display: flex;
   }
 
   .content-section {
     width: 45%;
-
+    padding-right: 10.5%;
   }
 
   .link-show-brands {
@@ -48,7 +49,7 @@
 
   .block-view-brands {
     position: relative;
-    width: 60%;
+    width: 55%;
 
   }
 
@@ -56,10 +57,12 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -35px;
-    &__item{
+
+    &__item {
       width: 33.33%;
       padding-left: 35px;
       padding-right: 35px;
+      margin-bottom: 50px;
     }
   }
 
@@ -69,8 +72,6 @@
     box-shadow: 0 3px 42px 1px rgba(21, 23, 23, 0.07);
     background-color: #ffffff;
     padding: 13px;
-    margin-bottom: 50px;
-
 
     &__title {
       color: #000000;
@@ -163,7 +164,6 @@
 
     &__footer {
 
-
       .acceleration {
         font-size: 10px;
         font-weight: 700;
@@ -171,18 +171,34 @@
       }
     }
   }
+}
 
+@media only screen and (max-width: 1600px) {
+  .section-popular-brands {
+    .content-section {
+      padding-right: 5.5%;
+    }
+
+    .nice-select {
+      width: 47%;
+    }
+
+    .brands {
+      margin: 0 -10px;
+    }
+
+    .brands__item {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 40px;
+    }
+  }
 }
 
 @include respond-to($screen-md) {
   .section-popular-brands {
-    .content-section {
-      padding-right: 15px;
-      padding-left: 20px;
-    }
-
-    .brands-pagination {
-      padding-top: 40px;
+    .brands__item {
+      width: 40%;
     }
   }
 }
@@ -190,12 +206,17 @@
 @include respond-to($lg) {
   .section-popular-brands {
     .content-section {
-      width: 40%;
+      width: 50%;
     }
 
     .block-view-brands {
-      width: 60%;
+      width: 50%;
       padding-left: 10px;
+
+    }
+
+    .brands__item {
+      width: 46%;
     }
 
   }
@@ -203,68 +224,111 @@
 
 @include respond-to($md) {
   .section-popular-brands {
-
-  }
-}
-
-@include respond-to($sm) {
-  .section-popular-brands {
-    .content-section {
-      //width: 45%;
-    }
-
-    .block-view-brands {
-      //width: 55%;
-      //padding-left: 10px;
-    }
-
-  }
-}
-
-@include respond-to($xs) {
-  .section-popular-brands {
     .container {
       flex-wrap: wrap;
     }
 
-    .card {
-      max-width: 350px;
-      padding: 15px;
-
-      .bg-logo-brand {
-        margin-bottom: 20px;
-      }
-
-      .wrap-img {
-        margin-bottom: 45px;
-      }
-    }
-
+    .block-view-brands,
     .content-section {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding-bottom: 15px;
     }
 
-    .block-view-brands {
-      width: 100%;
-      max-width: none;
-      padding: 0;
+    .brands__item {
+      width: 33%;
+    }
+
+    .form__group {
+      margin-bottom: 40px;
+    }
+
+    .form-choose {
+      margin-bottom: 100px;
     }
   }
 }
 
-@media all and (max-width: 380px) {
+//@include respond-to($sm) {
+//  .section-popular-brands {
+//    .content-section {
+//      //width: 45%;
+//    }
+//
+//    .block-view-brands {
+//      //width: 55%;
+//      //padding-left: 10px;
+//    }
+//
+//  }
+//}
+
+@include respond-to($xs) {
   .section-popular-brands {
-    //.card__title {
-    //  font-size: 14px;
-    //}
-    //
-    //.card__link {
-    //  font-size: 13px;
-    //}
+
+    .form__description {
+      text-align: left;
+    }
+
+    .block-view-brands {
+      padding-right: 0;
+    }
+
+    .card {
+      max-width: 350px;
+    }
+
+    .brands {
+      justify-content: center;
+    }
+
+    .brands__item {
+      width: 48%;
+    }
+
+    .content-section {
+      text-align: center;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-popular-brands {
+    .card-brand__title {
+      font-size: 13px;
+    }
+
+    .content-section {
+      padding-right: 0;
+    }
+
+    .specifications {
+      font-size: 10px;
+    }
+
+    .card-brand__footer .acceleration {
+      font-size: 9px;
+      line-height: 1.45;
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .section-popular-brands {
+
+    .brands {
+      margin: 0 -4px;
+    }
+
+    .brands__item {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+
+    .card__link {
+      font-size: 13px;
+    }
+
+    .custom-select {
+      width: 100%;
+    }
   }
 }

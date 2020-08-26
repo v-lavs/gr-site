@@ -12,6 +12,10 @@
     min-height: 750px;
   }
 
+  .section__title {
+    width: 65%;
+  }
+
   .left-content {
     width: 45%;
     color: $black;
@@ -117,6 +121,7 @@
   .section-stations-location {
     position: relative;
     padding-bottom: 40px;
+
     .right-content,
     .left-content {
       width: 100%;
@@ -133,7 +138,7 @@
       max-width: 480px;
     }
 
-    .container{
+    .container {
       position: static;
     }
 
@@ -170,10 +175,11 @@
   }
 }
 
-@media all and (max-width: 480px){
-  .section-stations-location{
+@media all and (max-width: 480px) {
+  .section-stations-location {
     padding-bottom: 0;
-    .section__title{
+
+    .section__title {
       font-size: 35px;
     }
   }

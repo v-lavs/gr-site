@@ -1,0 +1,107 @@
+.section-rental {
+  padding-top: 65px;
+  padding-bottom: 11%;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+  }
+
+  .rental-conditions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 6%;
+
+    &__item {
+      position: relative;
+      width: 45%;
+      padding-left: 70px;
+      padding-top: 14px;
+      padding-bottom: 36px;
+      font-size: 16px;
+      line-height: 1.23;
+      font-weight: 500;
+      font-family: "Montserrat", sans-serif;
+
+      .strong {
+        font-size: 23px;
+        font-weight: 600;
+        line-height: 1.15;
+        margin-bottom: 5px;
+      }
+    }
+
+    .wrap-bg-rental {
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      -webkit-background-size: contain;
+      background-size: contain;
+      width: 38px;
+      height: 38px;
+      left: 0;
+      top: 12px;
+      z-index: 1;
+    }
+  }
+
+  .part-left {
+    width: 45%;
+  }
+
+  .part-right {
+    width: 55%;
+
+    .link-FAQ {
+      display: inline-flex;
+      background-color: #ececec;
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      font-size: 54px;
+      font-weight: 600;
+      letter-spacing: 0.35rem;
+      padding: 19px 38px 19px 30px;
+      align-items: center;
+    }
+  }
+
+  .wrap-icon-dowland {
+    width: 41px;
+    height: 35px;
+    margin-right: 42px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  .section__title {
+    margin-bottom: 65px;
+  }
+
+  .wrap-bg {
+    position: relative;
+    width: 92%;
+    min-height: 475px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 21px;
+      right: 0;
+      top: -100vh;
+      bottom: 0;
+      z-index: 1;
+      background-color: rgba(0, 201, 67, .8);
+    }
+  }
+}

@@ -1,20 +1,10 @@
 .section-trust-value {
   padding-top: 50px;
-  padding-bottom: 12%;
+  padding-bottom: 14%;
 
   .container-default {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  .section__title {
-    max-width: 320px;
-    margin-bottom: 27px;
-  }
-
-  .content-section {
-    width: 30%;
-    padding: 20px 55px;
   }
 
   .value-list {
@@ -77,22 +67,8 @@
   }
 }
 
-@include respond-to($screen-md) {
-  .section-trust-value {
-    .content-section{
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    .value-list__item{
-      width: 50%;
-      &:nth-child(2):before{
-        display: none;
-      }
-    }
-  }
-}
 
-@include respond-to($xs) {
+@include respond-to($sm) {
   .section-trust-value {
     .content-section {
       width: 75%;
