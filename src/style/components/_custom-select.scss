@@ -1,0 +1,50 @@
+
+.nice-select {
+  border: 1px solid #a2a2a2;
+  width: 44%;
+  border-radius: 10px;
+
+  &:after {
+    position:absolute;
+    top: 50%;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 4.5px 0 4.5px;
+    border-color: #30bc55 transparent transparent transparent;
+    transform:translateY(50%) rotate(0);
+  }
+
+  .current {
+    color: #000;
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .list {
+    margin-top: 0;
+    right: 0;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .option {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    height: 55px;
+  }
+
+  .option.focus,
+  .option.selected.focus {
+    background-color: rgba(48, 188, 85, .3);
+  }
+
+  &.open:after {
+    transform: rotate(-180deg);
+  }
+}
+
+@include respond-to($screen-md) {
+
+}

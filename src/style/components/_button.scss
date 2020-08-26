@@ -1,0 +1,92 @@
+.btn {
+  display: inline-block;
+  font-family: $primary-font;
+  line-height: 1.25;
+  border-radius: 5px;
+  font-weight: 500;
+  border: 2px solid $light-green-200;
+  transition: background-color .35s, color .3s, box-shadow .35s;
+  background-color: transparent;
+  color: #000000;
+  font-size: 23px;
+
+  &_main {
+    background-color: $light-green-200;
+    color: $white;
+    padding: 6px 8px;
+    min-width: 170px;
+    line-height: 1.04;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $light-green;
+    }
+
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $light-green-200;
+    color: $white;
+    box-shadow: 2px 4px 21px rgba(35, 93, 15, 0.65);
+  }
+
+  &_go {
+    position: relative;
+    padding: 12px 42px 12px 32px ;
+    min-width: 170px;
+    text-align: left;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 9px 0 9px 9px;
+      border-color: transparent transparent transparent #30bc55;
+      right: 32px;
+      top: 50%;
+      transform: translateY(-50%);
+
+    }
+    &:hover:after,
+    &:focus:after{
+      border-color: transparent transparent transparent #fff;    }
+  }
+
+  &_round {
+    border-radius: 50%;
+    z-index: 10;
+    height: 71px;
+    width: 71px;
+    display: inline-flex;
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+
+    &:hover,
+    &:focus {
+      .letter {
+        fill: $light-green-200;
+      }
+    }
+  }
+}
+
+.letter {
+  width: 100%;
+  max-width: 39px;
+  height: 34px;
+  margin: auto;
+}
+
+@include respond-to($xxs) {
+  .btn_round {
+    height: 55px;
+    width: 55px;
+  }
+}
+

@@ -1,0 +1,133 @@
+.section-trust-value {
+  padding-top: 50px;
+  padding-bottom: 12%;
+
+  .container-default {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .section__title {
+    max-width: 320px;
+    margin-bottom: 27px;
+  }
+
+  .content-section {
+    width: 30%;
+    padding: 20px 55px;
+  }
+
+  .value-list {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    &__item {
+      position: relative;
+      width: 25%;
+      padding: 0 20px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 1px;
+        height: 49px;
+        background-color: $white-grey;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:last-child:before {
+        display: none;
+      }
+    }
+
+    .card {
+      position: relative;
+      max-width: 240px;
+      width: 100%;
+      text-align: left;
+      margin: 0 auto;
+      padding: 20px;
+      border: none;
+
+      &__title {
+        opacity: 0.5;
+        font-size: 17px;
+        font-weight: 500;
+        color: #000000;
+        font-family: $secondary-font;
+        text-align: center;
+
+      }
+    }
+
+    .bg-icon {
+      width: 63px;
+      height: 63px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      margin: 0 auto 10px;
+    }
+  }
+}
+
+@include respond-to($screen-md) {
+  .section-trust-value {
+    .content-section{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .value-list__item{
+      width: 50%;
+      &:nth-child(2):before{
+        display: none;
+      }
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-trust-value {
+    .content-section {
+      width: 75%;
+      margin: auto;
+      text-align: center;
+    }
+
+    .section__title,
+    .value-list {
+      width: 100%;
+      max-width: none;
+      &__item{
+        padding: 0 15px;
+      }
+    }
+
+
+    .section__text {
+      max-width: none;
+    }
+  }
+}
+
+@media all and (max-width: 480px){
+  .section-trust-value{
+    padding-top: 30px;
+    .content-section{
+      width: 90%;
+    }
+    .value-list__item{
+      width: 100%;
+      padding: 0;
+      &:before{
+        display: none;
+      }
+    }
+  }
+}

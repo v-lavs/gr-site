@@ -1,0 +1,55 @@
+.filter-brand {
+  max-width: 550px;
+
+  .form {
+    &__group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 15%;
+    }
+
+    &__footer {
+      padding-top: 32px;
+      display: flex;
+    }
+
+    &__description {
+
+      width: 50%;
+      position: relative;
+      color: #000000;
+      font-family: "Montserrat", sans-serif;
+      font-size: 23px;
+      font-weight: 600;
+      line-height: 1.07;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        background-image: url(../assets/img/icon-car.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 49px;
+        height: 19px;
+        left: 9px;
+        top: -32px;
+        z-index: 1;
+      }
+    }
+  }
+
+  .wrap-btn {
+    width: 50%;
+    text-align: center;
+  }
+
+  .nice-select {
+    height: 100%;
+    margin-bottom: 32px;
+  }
+
+}

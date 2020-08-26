@@ -1,0 +1,152 @@
+.footer {
+  background-color: $black-100;
+  font-size: 18px;
+  color: rgba(255, 254, 254, .5);
+  padding-top: 45px;
+  flex-shrink: 0;
+
+  .blocks-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  &_top {
+    position: relative;
+    padding: 50px 0;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      background-color: $off-white;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      z-index: 2;
+    }
+  }
+
+  &_bottom {
+    padding: 30px 15px 55px;
+    .copyright {
+      padding-left: 15px;
+    }
+  }
+
+  .block-list {
+    width: 25%;
+    padding: 0 15px;
+
+    &__title {
+      font-size: 22px;
+      font-weight: 500;
+      color: $white;
+      margin-bottom: 45px;
+    }
+  }
+
+  .list {
+    &__item {
+      margin-bottom: 20px;
+    }
+    &__link {
+      display: inline-block;
+      transition: .35s;
+
+      &:hover,
+      &:focus {
+        color: rgba(255, 254, 254, 1);
+      }
+    }
+  }
+
+  .menu-info {
+    margin-left: auto;
+    color: $white;
+
+    .list__item {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .list__link {
+      display: inline-block;
+      transition: .35s;
+
+      &:hover,
+      &:focus {
+        color: rgba(255, 254, 254, .5);
+      }
+    }
+  }
+}
+
+@include respond-to($md) {
+  .footer {
+    .block-list {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .footer {
+    &_top {
+      .list__item {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media all and(max-width: 580px) {
+  .footer {
+    &_top {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    .block-list {
+      width: 100%;
+      text-align: center;
+
+      &__title {
+        margin-bottom: 15px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media all and(max-width: 460px) {
+  .footer {
+    &_top {
+      padding-top: 10px;
+      padding-bottom: 0;
+    }
+
+    &_bottom {
+      text-align: center;
+
+      .menu-info {
+        width: 100%;
+        order: -1;
+        margin-bottom: 10px;
+      }
+
+      .copyright {
+        width: 100%;
+      }
+    }
+  }
+}

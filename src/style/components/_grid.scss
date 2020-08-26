@@ -1,0 +1,38 @@
+
+.container {
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+@media all and (max-width: 1600px) {
+  .container {
+    max-width: 1240px;
+  }
+}
+
+@include respond-to($lg) {
+  .container {
+    max-width: 1050px;
+  }
+}
+
+@include respond-to($md) {
+  .container {
+    max-width: 767px;
+  }
+}
+
+@include respond-to($sm) {
+  .container {
+    max-width: 680px;
+  }
+}
+
+@include respond-to($xs) {
+  .container {
+    max-width: 580px;
+  }
+}
+

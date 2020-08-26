@@ -1,0 +1,688 @@
+.section-banner {
+  position: relative;
+  overflow: hidden;
+
+  .container-default {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 80vh;
+  }
+
+  .side {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/img/red-tesla-model-s.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .side1 {
+    clip-path: polygon(27.5% 0, 50% 50%, 27.5% 100%, 0 100%, 0 0);
+    transform: translateX(-20%);
+
+  }
+
+  .side2 {
+    clip-path: polygon(50% 50%, 26.5% 0, 73.9% 0);
+    transform: translateY(-20%);
+  }
+
+  .side3 {
+    clip-path: polygon(72.9% 0, 50% 50%, 72.9% 100%, 100% 100%, 100% 0);
+    transform: translateX(20%);
+  }
+
+  .side4 {
+    clip-path: polygon(50% 50%, 26.5% 100%, 73.9% 100%);
+    transform: translateY(20%);
+  }
+
+  .link {
+    position: relative;
+    display: flex;
+    padding: 20px;
+    overflow: hidden;
+    z-index: 1;
+
+    &:hover,
+    &:focus {
+      .banner-category__title {
+        color: #fff;
+      }
+
+      &:before {
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+        transform: scale(1, 1);
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      top: 20px;
+      background-color: rgba(0, 128, 0, 0.6);
+
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+
+      -webkit-transition: transform .45s;
+      -moz-transition: transform .45s;
+      -ms-transition: transform .45s;
+      -o-transition: transform .45s;
+      transition: transform .45s;
+
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    &_top {
+      .banner-category {
+        left: 0;
+        bottom: 0;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        -webkit-transform: rotate(45deg) translate(-1%, 21%);
+        transform: rotate(45deg) translate(-1%, 21%);
+
+        &__text {
+          display: inline-block;
+          max-width: 17vw;
+          margin: 0 auto;
+        }
+      }
+
+      .inner {
+        padding-top: 10vh;
+        padding-bottom: 15vh;
+        margin-bottom: 30px;
+      }
+    }
+
+    &_bottom {
+      .banner-category {
+        right: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        -webkit-transform: rotate(45deg) translate(-1%, -21%);
+        transform: rotate(45deg) translate(-1%, -21%);
+
+        &__text {
+          display: inline-block;
+          max-width: 17vw;
+          margin: 0 auto;
+
+        }
+      }
+
+      .inner {
+        padding-top: 15vh;
+      }
+    }
+
+    &_left {
+      .banner-category {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        right: 0;
+        bottom: 0;
+        -webkit-transform: rotate(45deg) translate(21%, 1%);
+        transform: rotate(45deg) translate(21%, 1%);
+      }
+
+      .inner {
+        padding-right: 15vh;
+        max-width: 23vw;
+      }
+    }
+
+    &_right {
+      .banner-category {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        left: 0;
+        top: 0;
+        -webkit-transform: rotate(45deg) translate(-21%, 1%);
+        transform: rotate(45deg) translate(-21%, 1%);
+      }
+
+      .inner {
+        padding-left: 15vh;
+        max-width: 23vw;
+
+      }
+    }
+  }
+
+}
+
+.banner-category {
+  position: absolute;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  height: 50%;
+  width: 50%;
+
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -ms-transform-origin: center;
+  -o-transform-origin: center;
+  transform-origin: center;
+  z-index: 3;
+
+  .inner {
+    max-height: 40vh;
+
+  }
+
+  &__text {
+    color: #ffffff;
+    font-family: $secondary-font;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-size: 31px;
+    line-height: 0.8;
+    letter-spacing: -1.67px;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    position: relative;
+    font-size: 85px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    z-index: 5;
+
+
+    @supports (-webkit-text-stroke: 2px #fff) {
+      color: transparent;
+      -webkit-text-stroke: 2px #fff;
+    }
+  }
+
+}
+
+.section-grid-wrap {
+  position: relative;
+  z-index: 5;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+
+  -webkit-transform: rotate(-45deg) skew(4deg, 4deg);
+  -moz-transform: rotate(-45deg) skew(4deg, 4deg);
+  -ms-transform: rotate(-45deg) skew(4deg, 4deg);
+  -o-transform: rotate(-45deg) skew(4deg, 4deg);
+  transform: rotate(-45deg) skew(4deg, 4deg);
+
+  .link {
+    width: 50%;
+    height: 50%;
+    border: 1px solid $white;
+  }
+}
+
+.section-grid {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  z-index: 1;
+
+  @media all and (orientation: landscape) {
+    width: 200vw;
+    height: 200vw;
+  }
+  @media all and (orientation: portrait) {
+    width: 200vh;
+    height: 200vh;
+  }
+}
+
+//--------- ANIMATION  -----------
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes bounceInLeft {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInLeft {
+  animation-name: bounceInLeft;
+}
+
+@keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInDown {
+  animation-name: bounceInDown;
+}
+
+@keyframes bounceInRight {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInRight {
+  animation-name: bounceInRight;
+}
+
+
+@keyframes bounceInUp {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInUp {
+  animation-name: bounceInUp;
+}
+
+//-------- END ANIMATION---------
+@media all and (max-width: 1600px) {
+  .section-banner {
+    .side1 {
+      clip-path: polygon(26.5% 0, 50% 50%, 26.5% 100%, 0 100%, 0 0);
+    }
+
+    .side2 {
+      clip-path: polygon(50% 50%, 26% 0, 74% 0);
+    }
+
+    .side3 {
+      clip-path: polygon(73% 0, 50% 50%, 73% 100%, 100% 100%, 100% 0);
+    }
+
+    .side4 {
+      clip-path: polygon(50% 50%, 26% 100%, 74% 100%);
+    }
+
+    .link_left .inner,
+    .link_right .inner {
+      max-width: 30vw;
+    }
+  }
+}
+
+@media all and (max-width: 1880px) {
+  .section-banner {
+    .side1 {
+      clip-path: polygon(29.5% 0, 50% 50%, 29.5% 100%, 0 100%, 0 0);
+    }
+
+    .side2 {
+      clip-path: polygon(50% 50%, 28.5% 0, 72% 0);
+    }
+
+    .side3 {
+      clip-path: polygon(71% 0, 50% 50%, 71% 100%, 100% 100%, 100% 0);
+    }
+
+    .side4 {
+      clip-path: polygon(50% 50%, 28.5% 100%, 72% 100%);
+    }
+  }
+}
+
+@media all and (max-width: 1480px) {
+  .section-banner {
+    .side1 {
+      clip-path: polygon(26.5% 0, 50% 50%, 26.5% 100%, 0 100%, 0 0);
+    }
+
+    .side2 {
+      clip-path: polygon(50% 50%, 26% 0, 74% 0);
+    }
+
+    .side3 {
+      clip-path: polygon(73% 0, 50% 50%, 73% 100%, 100% 100%, 100% 0);
+    }
+
+    .side4 {
+      clip-path: polygon(50% 50%, 26% 100%, 74% 100%);
+    }
+  }
+}
+
+@include respond-to($lg) {
+  .section-banner {
+    .link_left .inner,
+    .link_right .inner {
+      max-width: 38vw;
+    }
+
+    .side1 {
+      clip-path: polygon(19.5% 0, 50% 50%, 19.5% 100%, 0 100%, 0 0);
+    }
+
+    .side2 {
+      clip-path: polygon(50% 50%, 19% 0, 81.5% 0);
+    }
+
+    .side3 {
+      clip-path: polygon(81% 0, 50% 50%, 81% 100%, 100% 100%, 100% 0);
+    }
+
+    .side4 {
+      clip-path: polygon(50% 50%, 19% 100%, 81.5% 100%);
+    }
+  }
+}
+
+@include respond-to($md) {
+  .section-banner {
+    .container-default {
+      height: 50vh;
+      @media (orientation: landscape) {
+        height: 75vw;
+
+        .link_top .inner {
+          max-height: none;
+          padding-bottom: 15vw;
+        }
+      }
+    }
+
+    .banner-category .inner {
+      max-height: 25vh;
+    }
+
+    .banner-category {
+      &__title {
+        font-size: 60px;
+      }
+    }
+
+    .link_bottom .inner {
+      padding-top: 9vh;
+    }
+
+    .link_top .inner {
+      margin-bottom: 50px;
+    }
+
+    .side1 {
+      clip-path: polygon(26.5% 0, 50% 50%, 26.5% 100%, 0 100%, 0 0);
+    }
+
+    .side2 {
+      clip-path: polygon(50% 50%, 26% 0, 74% 0);
+    }
+
+    .side3 {
+      clip-path: polygon(73% 0, 50% 50%, 73% 100%, 100% 100%, 100% 0);
+    }
+
+    .side4 {
+      clip-path: polygon(50% 50%, 26% 100%, 74% 100%);
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .section-banner {
+    .banner-category {
+      &__text {
+        display: none !important;
+      }
+    }
+
+    .link_top .inner {
+      margin-bottom: 0;
+      padding-bottom: 22vh;
+    }
+
+    .side1 {
+      clip-path: polygon(25.5% 0, 50% 50%, 25.5% 100%, 0 100%, 0 0);
+    }
+
+    .side2 {
+      clip-path: polygon(50% 50%, 24% 0, 77% 0);
+    }
+
+    .side3 {
+      clip-path: polygon(75% 0, 50% 50%, 75% 100%, 100% 100%, 100% 0);
+    }
+
+    .side4 {
+      clip-path: polygon(50% 50%, 24% 100%, 77% 100%);
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-banner {
+    .banner-category {
+      &__title {
+        font-size: 48px;
+      }
+    }
+
+    .link_top {
+      .inner {
+        padding-bottom: 17vh;
+      }
+    }
+
+    .link_bottom {
+      .inner {
+        padding-top: 12vh;
+      }
+    }
+
+    .link_right {
+      .inner {
+        padding-left: 13vh;
+      }
+    }
+
+    .side1 {
+      clip-path: polygon(18.5% 0, 50% 50%, 18.5% 100%, 0 100%, 0 0);
+    }
+
+    .side2 {
+      clip-path: polygon(50% 50.5%, 17% 0, 84% 0);
+    }
+
+    .side3 {
+      clip-path: polygon(83% 0, 50% 50%, 83% 100%, 100% 100%, 100% 0);
+    }
+
+    .side4 {
+      clip-path: polygon(50% 49.5%, 17% 100%, 84% 100%);
+    }
+
+  }
+}
+
+@media all and (max-width: 520px) {
+  .section-banner {
+    .link_right {
+      .inner {
+        padding-left: 40px;
+      }
+    }
+
+    .link_left {
+      .inner {
+        padding-right: 40px;
+      }
+    }
+
+    .link_top {
+      .inner {
+        padding-bottom: 15vh;
+      }
+    }
+
+    .banner-category {
+      &__title {
+        font-size: 36px;
+      }
+    }
+
+  }
+}
+
+@media all and (max-width: 380px) {
+  .section-banner {
+    .banner-category {
+      &__title {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+

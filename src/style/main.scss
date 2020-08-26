@@ -1,0 +1,29 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import '../lib/jquery-nice-select-1.1.0/scss/nice-select';
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
+
+@import 'components/grid';
+
+@import 'components/slider';
+@import 'components/button';
+@import 'components/filter';
+@import 'components/custom-select';
+@import 'components/sections/section-banner';
+@import 'components/sections/section-popular-brands';
+@import 'components/sections/section-reviews';
+@import 'components/sections/section-trust-value';
+@import 'components/sections/section-stations-location';
+@import 'components/sections/section-advantages';
+@import 'components/sections/section-about';
+
+@import 'components/card';
+@import 'components/header';
+@import 'components/footer';
+
+
+

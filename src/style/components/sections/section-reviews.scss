@@ -1,0 +1,336 @@
+.section-reviews {
+  padding-top: 110px;
+  padding-bottom: 30px;
+
+  .container-default {
+    display: flex;
+  }
+
+  .left-content {
+    width: 57%;
+    padding-top: 65px;
+  }
+
+  .right-content {
+    position: relative;
+    width: 43%;
+  }
+
+  .block-reviews {
+    position: relative;
+    color: $white;
+    padding: 45px 40px 55px 95px;
+    background-color: #30bc55;
+    background-repeat: no-repeat;
+    background-position: right -40.6% bottom;
+    -webkit-background-size: 45%;
+    background-size: 45%;
+    margin-left: auto;
+
+    &:before {
+      position: absolute;
+      content: '';
+      background-color: $white;
+      width: 1px;
+      height: 100%;
+      left: 95px;
+      top: 0;
+      bottom: 0;
+      z-index: 3;
+    }
+  }
+
+  .slogan {
+    width: 100%;
+    max-width: 90%;
+    font-family: $secondary-font;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.07;
+    padding-left: 7%;
+    margin-bottom: 30px;
+  }
+
+  .wrap-avatar {
+    height: 60px;
+    width: 60px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 25px;
+  }
+
+  .img-avatar {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .link-bay-now {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    text-transform: uppercase;
+    color: inherit;
+    font-family: $secondary-font;
+    font-size: 21px;
+    font-weight: 600;
+    padding-top: 40px;
+    transition: .35s;
+    margin-left: 13.5%;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:after {
+      content: '';
+      margin-left: 25px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 0 8px 9px;
+      border-color: transparent transparent transparent $white;
+      z-index: 2;
+    }
+  }
+
+  .card {
+    &__header {
+      display: flex;
+      align-items: center;
+      padding: 25px 0;
+
+      .name,
+      .car-brand {
+        display: block;
+        font-size: 19px;
+        font-weight: 600;
+      }
+
+      .name {
+        font-weight: 600;
+      }
+
+      .car-brand {
+        font-weight: 500;
+      }
+    }
+
+    &__body {
+      max-width: 530px;
+      font-family: $secondary-font;
+      font-size: 17px;
+      line-height: 1.23;
+      font-weight: 300;
+    }
+  }
+
+  .right-content__bg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 43vw;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 2;
+  }
+
+  .slider-reviews {
+    padding-left: 13.5%;
+    padding-right: 40px;
+  }
+
+  .slide-text {
+    margin-bottom: 20px;
+  }
+
+  .reviews-pagination {
+    position: absolute;
+    left: -74px;
+    top: 50%;
+    transform: rotate(90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .swiper-pagination-bullet {
+    &-active {
+      background-color: #168233;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $white;
+  }
+}
+
+@include respond-to($screen-md) {
+  .section-reviews {
+    .slogan {
+      font-size: 38px;
+    }
+  }
+}
+
+@include respond-to($lg) {
+  .section-reviews {
+    .slogan {
+      max-width: 100%;
+      font-size: 32px;
+    }
+
+    .block-reviews {
+      &:before {
+        left: 75px;
+      }
+
+      padding-left: 75px;
+    }
+
+    .reviews-pagination {
+      left: -60px;
+    }
+
+    .left-content {
+      width: 70%;
+      flex-shrink: 0;
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .section-reviews {
+    padding-top: 0;
+
+    .slogan {
+      width: 80%;
+      padding-left: 30px;
+      font-size: 26px;
+    }
+
+    .left-content {
+      padding-top: 0;
+    }
+
+    .right-content {
+      display: none;
+    }
+
+    .left-content {
+      width: 100%;
+    }
+
+    .slider-reviews {
+      padding-right: 0;
+      padding-left: 30px;
+    }
+
+    .block-reviews {
+      padding-left: 65px;
+
+      &:before {
+        left: 65px;
+      }
+    }
+
+    .link-bay-now {
+      margin-left: 30px;
+    }
+  }
+}
+
+@include respond-to($md) {
+  .section-reviews {
+    .slogan {
+      width: 100%;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-reviews {
+    .slogan {
+      font-size: 24px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+
+    .block-reviews {
+      padding-left: 40px;
+
+      &:before {
+        left: 40px;
+      }
+    }
+
+    .link-bay-now {
+      padding-top: 60px;
+    }
+
+    .reviews-pagination {
+      top: auto;
+      left: 50%;
+      bottom: 18%;
+      transform: translateX(-50%) rotate(0deg);
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .slider-reviews {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .section-reviews {
+    .block-reviews {
+      padding-left: 10px;
+      padding-right: 10px;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .section-reviews {
+    .reviews-pagination,
+    .swiper-pagination_vertical{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .slider-reviews,
+    .slogan {
+      padding-left: 0;
+    }
+
+    .link-bay-now {
+      margin-left: 0;
+    }
+  }
+}
+
+@media all and (max-width: 360px) {
+  .section-reviews {
+    .reviews-pagination{
+      bottom: 14%;
+    }
+  }
+}
