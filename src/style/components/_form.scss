@@ -12,13 +12,13 @@
     line-height: 1.1;
     border-radius: 10px;
     padding: 15px 23px;
-    margin-bottom: -32px;
+    margin-bottom: 32px;
     color: rgba(0, 0, 0, .8);
     box-shadow: 0 3px 15px rgba(21, 23, 23, 0.1);
-    &_middle {
-      width: 50%;
-      max-width: 257px;
-    }
+  }
+
+  textarea {
+    max-height: 130px;
   }
 
   .form-group__title {
@@ -26,6 +26,8 @@
     font-size: 20px;
     font-weight: 500;
     color: #000;
+    margin-bottom: 10px;
+
   }
 
   &__heading {
@@ -90,6 +92,25 @@
 
   .checkmark:checked + .check-mark {
     background-color: $light-green-200;
+  }
+
+  .block-required{
+    position: relative;
+    &:before{
+      position: absolute;
+      content: '';
+      display: block;
+      background-image: url(../assets/img/icons/check.png);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      width: 18px;
+      height: 15px;
+      top: -5px;
+      left: -24px;
+      z-index: 2;
+    }
   }
 
 }

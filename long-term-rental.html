@@ -177,10 +177,12 @@
                 </div>
 
                 <div class="view-img-product">
-                    <h2 class="section__title"><span class="green-color">Tesla</span> Model 3</h2>
-                    <div class="wrap-img">
-                        <img src="assets/img/Model_3_Pearl_White_Multi-Coat-optimized.png" alt=""
-                             class="img img-product">
+                    <div class="wrap-content">
+                        <h2 class="section__title"><span class="green-color">Tesla</span> Model 3</h2>
+                        <div class="wrap-img">
+                            <img src="assets/img/Model_3_Pearl_White_Multi-Coat-optimized.png" alt=""
+                                 class="img img-product">
+                        </div>
                     </div>
                 </div>
 
@@ -216,8 +218,9 @@
                 </div>
             </div>
         </section>
+
         <section class="section section-ordering">
-            <div class="container-default">
+            <div class="container">
                 <form action="#" method="post" class="form form-ordering">
                     <div class="form__header">
 
@@ -230,53 +233,59 @@
                     </div>
                     <div class="fieldboxs">
                         <div class="fieldboxs-part">
+
+                            <h4 class="form-group__title block-required">Fahrername*</h4>
                             <div class="form-group">
-                                <h4 class="form-group__title">Fahrername*</h4>
-                                <input type="text" class="input input_middle" placeholder="Koltyn"
-                                       required>
-                                <input type="text" class="input input_middle" placeholder=" Nazar"
-                                       required>
-                                <div class="error"></div>
+                                <div class="form-group-small">
+                                    <input type="text" class="input" placeholder="Koltyn"
+                                           required>
+                                </div>
+                                <div class="form-group-small">
+                                    <input type="text" class="input" placeholder=" Nazar" required>
+                                </div>
                             </div>
 
+
+                            <h4 class="form-group__title block-required">Firma / Privat Adresse (Rechnungsadresse)</h4>
                             <div class="form-group">
-                                <h4 class="form-group__title">Firma / Privat Adresse (Rechnungsadresse)</h4>
                                 <input type="text" class="input" placeholder="Anschrift"
                                        required>
-                                <input type="text" class="input input_middle" placeholder="Ort"
-                                       required>
-                                <input type="text" class="input input_middle" placeholder="PLZ"
-                                       required>
-                                <div class="error"></div>
+                                <div class="form-group-small">
+                                    <input type="text" class="input" placeholder="Ort"
+                                           required>
+                                </div>
+                                <div class="form-group-small">
+                                    <input type="text" class="input" placeholder="PLZ" required>
+                                </div>
                             </div>
                         </div>
 
                         <div class="fieldboxs-part">
                             <div class="form-group">
-                                <label class="form-group__title">Email </label>
-                                <input type="text" class="input input_middle" placeholder="example@gmail.com"
-                                       required>
+                                <div class="form-group-small">
+                                    <label class="form-group__title">Email</label>
+                                    <input type="text" class="input" placeholder="example@gmail.com"
+                                           required>
 
+                                </div>
+                                <div class="form-group-small">
+                                    <label class="form-group__title">Telephone*</label>
+                                    <input type="text" class="input" required>
+
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label class="form-group__title">Telephone* </label>
-                                <input type="text" class="input input_middle" placeholder=""
-                                       required>
+                                <label class="form-group__title">Vermerk</label>
+                                <textarea name="massage" cols="10" rows="6" class="input textarea"
+                                          placeholder=""></textarea>
 
-                            </div>
-                            <div class="form-group">
-                                <label class="form-group__title">Vermerk
-                                    <textarea name="massage" cols="30" rows="10" class="input textarea"
-                                              placeholder=""></textarea>
-                                </label>
                             </div>
                         </div>
 
                         <div class="fieldboxs-part">
                             <div class="form-group">
                                 <label class="form-group__title">Geburtstag*</label>
-                                <input type="text" class="input" placeholder="">
-
+                                <input type="text" class="input input_small">
                             </div>
                             <div class="form-group">
                                 <h4 class="form-group__title">Kundendaten Option</h4>

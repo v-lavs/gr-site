@@ -125,7 +125,7 @@
   .input {
     border: 1px solid #a2a2a2;
     width: 20%;
-    border-radius: 10px;
+    border-radius: 5px;
     line-height: 1;
     color: #868686;
     font-size: 17px;
@@ -134,6 +134,7 @@
   }
 
   .nice-select {
+    border-radius: 5px;
     .option,
     .current {
       color: #868686;

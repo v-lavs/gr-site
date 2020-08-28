@@ -5,15 +5,37 @@
   .form-ordering {
     .fieldboxs {
       display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
       padding-top: 55px;
     }
 
     .fieldboxs-part {
-      width: 40%;
+      width: 36%;
+      padding: 0 20px;
 
-      &:last-of-type{
+      &:last-of-type {
         width: 20%;
+        max-width: 495px;
+      }
+
+      .form-group {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .input_small{
+        width: 100%;
+        max-width: 257px;
+      }
+      .form-group-small {
+        width: 45%;
+
+      }
+
+      .form-group__title {
+        width: 100%;
       }
     }
   }
@@ -37,5 +59,9 @@
         margin-right: 0;
       }
     }
+  }
+
+  .form__footer {
+    padding-top: 70px;
   }
 }
