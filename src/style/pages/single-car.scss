@@ -1,0 +1,30 @@
+.page-single-car{
+
+}
+
+.section-product-car{
+  padding-bottom: 80px;
+  .container-default{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .slider-gallery-wrap{
+    width: 55%;
+  }
+  .block-text{
+    width: 100%;
+    max-width: 1107px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 7%;
+  }
+}
+
+.section-specifications{
+  padding-top: 80px;
+  .container-default{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}

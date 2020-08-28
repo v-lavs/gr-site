@@ -43,6 +43,53 @@ img {
   color: #2ab065;
 }
 
+.section__text {
+  width: 100%;
+  max-width: 370px;
+  color: #706f6f;
+  font-family: $secondary-font;
+  font-size: 17px;
+  line-height: 1.35;
+  margin-bottom: 35px;
+}
+
+.decor-dashed {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 2px;
+    background: -webkit-gradient(linear, right top, left top, color-stop(50%, transparent), color-stop(50%, #d8d9d9)), -webkit-gradient(linear, right top, left top, from(#d8d9d9), to(#fff));
+    background: linear-gradient(to left, transparent 50%, #d8d9d9 50%), linear-gradient(to left, #d8d9d9, #fff);
+    background-size: 25px 2px, 0 2px;
+  }
+}
+
+.block-required {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: url(../assets/img/icons/check.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 18px;
+    height: 15px;
+    top: -5px;
+    left: -24px;
+    z-index: 2;
+  }
+}
+
 .section {
   padding-top: 8%;
   padding-bottom: 8%;
@@ -76,6 +123,10 @@ img {
   }
 }
 
+.page{
+  padding-bottom: 10%;
+}
+
 @include respond-to($lg) {
   .section__title {
     font-size: 34px;
@@ -87,31 +138,7 @@ img {
   }
 }
 
-.section__text {
-  width: 100%;
-  max-width: 370px;
-  color: #706f6f;
-  font-family: $secondary-font;
-  font-size: 17px;
-  line-height: 1.35;
-  margin-bottom: 35px;
-}
 
-.decor-dashed{
-  position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    height: 2px;
-    background: -webkit-gradient(linear,right top,left top,color-stop(50%,transparent),color-stop(50%,#d8d9d9)),-webkit-gradient(linear,right top,left top,from(#d8d9d9),to(#fff));
-    background: linear-gradient(to left,transparent 50%,#d8d9d9 50%),linear-gradient(to left,#d8d9d9,#fff);
-    background-size: 25px 2px,0 2px;
-  }
-}
 
 
 
