@@ -42,7 +42,9 @@ img {
 .green-color {
   color: #2ab065;
 }
-
+.d-flex{
+  display: flex;
+}
 .section__text {
   width: 100%;
   max-width: 370px;
@@ -126,6 +128,14 @@ img {
 .page{
   padding-bottom: 10%;
 }
+
+.pagination{
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
 
 @include respond-to($lg) {
   .section__title {

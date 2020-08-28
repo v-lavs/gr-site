@@ -30,7 +30,7 @@
 
   .characteristics-car {
     margin-left: auto;
-    width: 8.7%;
+    flex-shrink: 0;
 
     &__item {
       display: flex;
