@@ -1,4 +1,4 @@
-.section-rental {
+.section-rental-conditions {
   padding-top: 65px;
   padding-bottom: 11%;
   overflow: hidden;
@@ -102,6 +102,27 @@
       bottom: 0;
       z-index: 1;
       background-color: rgba(0, 201, 67, .8);
+    }
+  }
+}
+
+@include respond-to($md) {
+  .section-rental {
+    .container {
+      flex-wrap: wrap;
+    }
+
+    .part-left {
+      margin-bottom: 60px;
+    }
+
+    .part-left,
+    .part-right {
+      width: 100%;
+    }
+
+    .wrap-bg {
+      width: 100%;
     }
   }
 }

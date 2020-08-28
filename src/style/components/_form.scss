@@ -1,0 +1,96 @@
+.form {
+  font-family: "GothamPro", sans-serif;
+
+  .input {
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    font-family: "GothamPro", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.1;
+    border-radius: 10px;
+    padding: 15px 23px;
+    margin-bottom: -32px;
+    color: rgba(0, 0, 0, .8);
+    box-shadow: 0 3px 15px rgba(21, 23, 23, 0.1);
+    &_middle {
+      width: 50%;
+      max-width: 257px;
+    }
+  }
+
+  .form-group__title {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  &__heading {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.55;
+    color: #000000;
+  }
+
+  &__text {
+    font-size: 15px;
+    font-weight: 300;
+    color: #979797;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+  ::placeholder {
+    color: #979797;
+  }
+
+  .label-checkmark {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'GothamPro', sans-serif;
+    margin-bottom: 24px;
+    padding-left: 35px;
+    transition: .35s;
+
+  }
+
+  .checkmark {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    opacity: 0;
+  }
+
+  .check-mark {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 2px 5px 1px rgba(21, 23, 23, 0.2);
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-transition: .35s;
+    -o-transition: .35s;
+    -moz-transition: .35s;
+    transition: .35s;
+    margin-left: -35px;
+  }
+
+  .checkmark:checked + .check-mark {
+    background-color: $light-green-200;
+  }
+
+}
+

@@ -1,0 +1,143 @@
+.cost-calculator {
+  max-width: 488px;
+  box-shadow: 0 0 46px rgba(51, 51, 51, 0.07);
+  background-color: #ffffff;
+  padding: 63px 45px;
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .total{
+      display: inline-flex;
+      flex-direction: column;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 1.07;
+      color: #45c366;
+      justify-content: center;
+      align-items: center;
+      width: 27%;
+      span{
+
+        color: #868686;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+  &__form {
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .label,
+  .cost-calculator__title {
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 3px;
+  }
+
+  .input[type="color"] {
+    width: 22px;
+    height: 22px;
+    box-shadow: 0 3px 16px 1px rgba(51, 51, 51, 0.15);
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    -webkit-appearance: none;
+
+    border-radius: 100%;
+
+  }
+  .calculator__section{
+    padding-top: 20px;
+    padding-bottom: 60px;
+    .form__group{
+      display: flex;
+    flex-direction: column;
+      margin-bottom: 14px;
+    }
+  }
+
+  .calculator__section_border {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #5fe591;
+    margin-bottom: 30px;
+  }
+
+  .form-group_contract-term {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+
+  // custom-radio-btn
+
+  .label-checkmark {
+    position: relative;
+    width: 67px;
+    height: 66px;
+    color: #000000;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 0.8;
+    transition: .35s;
+    z-index: 3;
+
+    .small-text {
+      display: inline-block;
+      font-size: 9px;
+    }
+  }
+
+  .checkmark {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    opacity: 0;
+  }
+
+  .check-mark {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    box-shadow: 0 2px 5px 1px rgba(21, 23, 23, 0.2);
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    -webkit-transition: .35s;
+    -o-transition: .35s;
+    -moz-transition: .35s;
+    transition: .35s;
+    z-index: 0;
+  }
+
+  .checkmark:checked + .check-mark {
+    background-color: #30bc55;
+  }
+
+  .input {
+    border: 1px solid #a2a2a2;
+    width: 20%;
+    border-radius: 10px;
+    line-height: 1;
+    color: #868686;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 5px 18px;
+  }
+
+  .nice-select {
+    .option,
+    .current {
+      color: #868686;
+      font-weight: 500;
+    }
+  }
+}

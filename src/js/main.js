@@ -162,6 +162,6 @@ $(document).ready(function () {
 
             setEqualHeight();
         }
-    })
-})
-;
+    });
+
+});

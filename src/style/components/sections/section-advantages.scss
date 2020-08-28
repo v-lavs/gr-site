@@ -91,6 +91,7 @@
     padding-left: 42px;
     padding-right: 37px;
     margin-bottom: 12px;
+
     & > * {
       margin-bottom: 12px;
     }
@@ -105,7 +106,8 @@
   .block__footer {
     padding-top: 62px;
     margin-top: 50px;
-    .btn{
+
+    .btn {
       margin-top: 55px;
     }
   }
@@ -180,8 +182,16 @@
       }
     }
 
+    .condition {
+      margin-bottom: 55px;
+    }
+
     .block__footer {
       padding-top: 40px;
+
+      .btn {
+        margin-top: 0;
+      }
     }
   }
 }

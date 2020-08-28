@@ -44,8 +44,8 @@ img {
 }
 
 .section {
-  padding-top: 7%;
-  padding-bottom: 7%;
+  padding-top: 8%;
+  padding-bottom: 8%;
 
   &__sub-title {
     color: #000000;
@@ -95,6 +95,22 @@ img {
   font-size: 17px;
   line-height: 1.35;
   margin-bottom: 35px;
+}
+
+.decor-dashed{
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 2px;
+    background: -webkit-gradient(linear,right top,left top,color-stop(50%,transparent),color-stop(50%,#d8d9d9)),-webkit-gradient(linear,right top,left top,from(#d8d9d9),to(#fff));
+    background: linear-gradient(to left,transparent 50%,#d8d9d9 50%),linear-gradient(to left,#d8d9d9,#fff);
+    background-size: 25px 2px,0 2px;
+  }
 }
 
 

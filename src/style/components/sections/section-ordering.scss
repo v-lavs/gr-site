@@ -1,0 +1,41 @@
+.section-ordering {
+  padding-top: 7%;
+  padding-bottom: 90px;
+
+  .form-ordering {
+    .fieldboxs {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 55px;
+    }
+
+    .fieldboxs-part {
+      width: 40%;
+
+      &:last-of-type{
+        width: 20%;
+      }
+    }
+  }
+
+  .bottom-row {
+    width: 100%;
+
+    .form-group {
+      width: 100%;
+      display: flex;
+    }
+
+    .form-group__title {
+      margin-right: 80px;
+    }
+
+    .label-checkmark {
+      padding-right: 60px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

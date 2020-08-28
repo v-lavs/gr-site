@@ -1,15 +1,27 @@
 .section-stations-location {
 
   .container {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    padding-top: 8%;
+    padding-bottom: 8%;
   }
 
   .right-content {
-    width: 55%;
-    position: relative;
-    min-height: 750px;
+    width: 100%;
+    position: absolute;
+    left: 45%;
+    top: 0;
+    bottom: 0;
+    right: 100vw;
+    display: flex;
+    align-items: center;
+
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center center;
   }
 
   .section__title {
@@ -19,7 +31,7 @@
   .left-content {
     width: 45%;
     color: $black;
-    padding-left: 0;
+    padding-right: 10px;
     padding-top: 85px;
     padding-bottom: 70px;
 
@@ -59,45 +71,25 @@
     }
   }
 
-  .wrap-bg-section {
-    width: 60vw;
-    position: absolute;
-    left: 0;
-    right: -60vw;
-    bottom: 0;
-    top: 0;
-    z-index: -1;
-    background-repeat: no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
-    background-position: right 0;
-    display: flex;
-    align-items: center;
-  }
-
   .section__title {
     width: 75%;
     margin-bottom: 76px;
   }
 
   .wrap-map {
-    position: relative;
-    width: 100%;
-    padding-top: 45%;
+    border-radius: 10px;
     overflow: hidden;
+    flex-grow: 1;
+    height: 500px;
+    width: 100vw;
+  }
 
-    .map {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1;
-      width: 100%;
-      height: 100%;
-    }
+  .map {
+    width: 100%;
+    height: 100%;
   }
 }
+
 
 @include respond-to($lg) {
   .section-stations-location {
@@ -106,10 +98,16 @@
     }
 
     .right-content {
-      padding: 10px;
+      left: 50%;
+    }
+
+    .wrap-map {
+      height: 400px;
     }
 
     .left-content {
+      width: 50%;
+
       .label {
         font-size: 26px;
       }
@@ -119,43 +117,16 @@
 
 @include respond-to($sm) {
   .section-stations-location {
-    position: relative;
     padding-bottom: 40px;
 
     .right-content,
     .left-content {
       width: 100%;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .left-content {
-      padding: 0;
-    }
-
-    .right-content {
-      order: 2;
-      max-width: 480px;
-    }
-
-    .container {
-      position: static;
-    }
-
-    .wrap-bg-section {
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
-
-    .left-content {
-      position: static;
-      order: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding-bottom: 80px;
+      text-align: center;
 
       .input {
         width: 75%;
@@ -164,6 +135,17 @@
         font-size: 24px;
         height: 65px;
       }
+    }
+
+    .section__title {
+      width: 100%;
+      text-align: center;
+    }
+
+    .right-content {
+      position: static;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     .map-auto-search {
