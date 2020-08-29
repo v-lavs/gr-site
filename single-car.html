@@ -101,52 +101,78 @@
     <main class="page page-single-car">
         <section class="section-product-car">
             <div class="container-default">
-                <div class="slider-gallery-wrap">
-                    <div class="swiper-container gallery-top">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"
-                                 style="background-image:url(assets/img/Volkswagen_ID3-02.jpg)"></div>
+                <div class="d-flex">
+                    <div class="slider-gallery-wrap">
+                        <div class="swiper-container gallery-top">
+                            <div class="swiper-wrapper">
+                                <div class="product-slide swiper-slide"
+                                     style="background-image:url(assets/img/Volkswagen_ID3-02.jpg)"></div>
+                                <div class="product-slide swiper-slide"
+                                     style="background-image:url(assets/img/Volkswagen_ID3-01.jpg)"></div>
+                                <div class="product-slide swiper-slide"
+                                     style="background-image:url(assets/img/Volkswagen_ID3-02.jpg)"></div>
+                                <div class="product-slide swiper-slide"
+                                     style="background-image:url(assets/img/Volkswagen_ID3-02.jpg)"></div>
+                                <div class="product-slide swiper-slide"
+                                     style="background-image:url(assets/img/Volkswagen_ID3-02.jpg)"></div>
+                                <div class="product-slide swiper-slide"
+                                     style="background-image:url(assets/img/Volkswagen_ID3-02.jpg)"></div>
 
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next swiper-button-white"></div>
+                            <div class="swiper-button-prev swiper-button-white"></div>
                         </div>
-                        <!-- Add Arrows -->
-                        <div class="swiper-button-next swiper-button-white"></div>
-                        <div class="swiper-button-prev swiper-button-white"></div>
-                    </div>
-                    <div class="swiper-container gallery-thumbs">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"
-                                 style="background-image:url(assets/img/Volkswagen_ID3-02.jpg)"></div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right-part">
-                    <h1 class="section__title">
-                        <span class="green-color">Battery Electric</span> Vehiclebr <br>
-                        <span class="car-brand">Volkswagen ID.3 Pure</span>
-                    </h1>
-                    <div class="product__details">
-                        <div class="product__details-item">
-                            <p>275 km
-                                <span class="text-small">Real range</span>
-                            </p>
-                        </div>
-
-                        <div class="product__details-item">
-                            <p>16.4 kWh/100km *
-                                <span class="text-small">Efficiency</span>
-                            </p>
-                        </div>
-
-                        <div class="product__details-item">
-                            <p>45.0 kWh
-                                <span class="text-small">Useable Battery</span>
-                            </p>
+                        <div class="swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="gallery-thumbs__item swiper-slide"
+                                     style="background-image:url(assets/img/Volkswagen_ID3-02.jpg)"></div>
+                                <div class="gallery-thumbs__item swiper-slide"
+                                     style="background-image:url(assets/img/Volkswagen_ID3-01.jpg)"></div>
+                                <div class="gallery-thumbs__item swiper-slide"
+                                     style="background-image:url(assets/img/Volkswagen_ID3-01.jpg)"></div>
+                                <div class="gallery-thumbs__item swiper-slide"
+                                     style="background-image:url(assets/img/Volkswagen_ID3-01.jpg)"></div>
+                                <div class="gallery-thumbs__item swiper-slide"
+                                     style="background-image:url(assets/img/Volkswagen_ID3-01.jpg)"></div>
+                                <div class="gallery-thumbs__item swiper-slide"
+                                     style="background-image:url(assets/img/Volkswagen_ID3-01.jpg)"></div>
+                            </div>
                         </div>
                     </div>
 
-                    <a href="#" class="btn btn_go">Gehen</a>
+                    <div class="right-part">
+                        <h1 class="section__title">
+                            <span class="green-color">Battery Electric</span> Vehiclebr <br>
+                            <span class="card-brand__title">Volkswagen ID.3 Pure</span>
+                        </h1>
+                        <div class="product-details">
+
+                            <div class="product-details__item">
+                                <span class="bg-icon" style="background-image: url(assets/img/road-black.png);"></span>
+                                <p>275 km
+                                    <span class="text-small">Real range</span>
+                                </p>
+                            </div>
+
+                            <div class="product-details__item">
+                                <span class="bg-icon" style="background-image: url(assets/img/sprout.png);"></span>
+                                <p>16.4 kWh/100km *
+                                    <span class="text-small">Efficiency</span>
+                                </p>
+                            </div>
+
+                            <div class="product-details__item">
+                                <span class="bg-icon"
+                                      style="background-image: url(assets/img/battery-black.png);"></span>
+                                <p>45.0 kWh
+                                    <span class="text-small">Useable Battery</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn btn_main btn_go btn_go-green">Gehen</a>
+                    </div>
                 </div>
                 <div class="block-text section__text">
                     <p>
@@ -287,12 +313,44 @@
                     </div>
                 </div>
                 <nav class="pagination">
-                    <a class="page-numbers" href="#">1</a>
-                    <a class="page-numbers" href="#">2</a>
-                    <a class="page-numbers  current" href="#">3</a>
-                    <a class="page-numbers" href="#">4</a>
-                    <a class="page-numbers" href="#">5</a>
-
+                    <ul class="pagination__list">
+                        <li class="pagination__item">
+                        <span class="pagination__btn pagination__btn_prev">
+                            <svg class="icon-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20"
+                                 height="20" viewBox="0 0 20 20">
+<title>chevron-thin-left</title>
+<path fill="#20b12e"
+      d="M13.891 17.418c0.268 0.272 0.268 0.709 0 0.979s-0.701 0.271-0.969 0l-7.83-7.908c-0.268-0.27-0.268-0.707 0-0.979l7.83-7.908c0.268-0.27 0.701-0.27 0.969 0s0.268 0.709 0 0.979l-7.141 7.419 7.141 7.418z"></path>
+</svg>
+                        </span>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="page-numbers" href="#">1</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="page-numbers" href="#">2</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="page-numbers  current" href="#">3</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="page-numbers" href="#">4</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="page-numbers" href="#">5</a>
+                        </li>
+                        <li class="pagination__item">
+                            <span class="pagination__btn pagination__btn_next">
+                      <svg class="icon-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                           viewBox="0 0 20 20">
+                        <title>chevron-thin-right</title>
+                        <path fill="#20b12e"
+                              d="M13.25 10l-7.141-7.42c-0.268-0.27-0.268-0.707 0-0.979 0.268-0.27 0.701-0.27 0.969 0l7.83 7.908c0.268 0.271 0.268 0.709 0 0.979l-7.83 7.908c-0.268 0.271-0.701 0.27-0.969 0s-0.268-0.707 0-0.979l7.141-7.417z"></path>
+                    </svg>
+                    </span>
+                        </li>
+                    </ul>
+                    <span class="pagination__text">Page 3 of 5</span>
                 </nav>
             </div>
         </section>
@@ -307,10 +365,7 @@
                     </li>
                     <li class="condition-list__item">
                         <h3 class="card__title">Vollkaskoversicherung Selbstbehalt von 2.500€ </h3>
-                        <div class="card__body">
-                            Europaweites GRATIS
-                            Aufladen an allen Tesla
-                        </div>
+                        <div class="card__body"></div>
                     </li>
                     <li class="condition-list__item">
                         <h3 class="card__title">Europaweites GRATIS

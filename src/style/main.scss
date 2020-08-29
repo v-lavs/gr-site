@@ -2,13 +2,13 @@
 @import 'utils/mixins';
 
 @import '../lib/jquery-nice-select-1.1.0/scss/nice-select';
+@import '../lib/range-slider/scss/irs';
 
 @import 'base/reset';
 @import 'base/typography';
 @import 'base/base';
 
 @import 'components/grid';
-
 @import 'components/slider';
 @import 'components/button';
 @import 'components/filter';
@@ -25,12 +25,15 @@
 @import 'components/sections/section-rental-conditions';
 @import 'components/sections/section-ordering';
 @import 'components/sections/section-product-rental';
+@import 'components/sections/section-rent';
 
 @import 'components/card';
 @import 'components/header';
 @import 'components/footer';
+
 @import 'pages/page-long-rental';
 @import 'pages/single-car';
+@import 'pages/catalog-vechicles';
 
 
 

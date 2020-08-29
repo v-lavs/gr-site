@@ -4,6 +4,7 @@
 
 //= include ../lib/jquery-3.3.1.min.js
 //= include ../lib/jquery-nice-select-1.1.0/js/jquery.nice-select.js
+//= include ../lib/range-slider/ion.rangeSlider.min.js
 
 
 /**
@@ -118,21 +119,20 @@ $(document).ready(function () {
 
     var galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 10,
-        slidesPerView: 4,
-        loop: true,
+        slidesPerView: 'auto',
         freeMode: true,
-        loopedSlides: 5, //looped slides should be the same
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
     });
     var galleryTop = new Swiper('.gallery-top', {
         spaceBetween: 10,
-        loop: true,
-        loopedSlides: 5, //looped slides should be the same
-
-        thumbs: {
-            swiper: galleryThumbs,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
+        thumbs: {
+            swiper: galleryThumbs
+        }
     });
 
 
@@ -146,19 +146,25 @@ $(document).ready(function () {
     /**
      * CARD HEIGHT
      **/
-
-    function setEqualHeight() {
-        var max_card_height = 0;
-        var $advantagesCards = $('.advantages-card');
-        $advantagesCards.each(function () {
-            if ($(this).height() > max_card_height) {
-                max_card_height = $(this).height();
+    function setEqualHeight(selector, breakpoint) {
+        var max_block_height = 0;
+        var $blockContent = $(selector);
+        $blockContent.each(function () {
+            if ($(this).height() > max_block_height) {
+                max_block_height = $(this).height();
             }
         });
-        $advantagesCards.css({minHeight: $(window).width() > 767 ? max_card_height : 'auto'});
+        $blockContent.css({
+            minHeight: $(window).width() > breakpoint ? max_block_height : 'auto'
+        });
     }
 
-    setEqualHeight();
+    function combyHeight() {
+        setEqualHeight('.block-advantages .advantages-card', 767);
+        // setEqualHeight('.condition-list .condition-list__item', 767);
+    }
+    combyHeight();
+
 
     var windowW = $(window).width();
 
@@ -185,5 +191,12 @@ $(document).ready(function () {
             setEqualHeight();
         }
     });
-
+    $(".js-range-slider").ionRangeSlider({
+        skin: "sharp",
+        type: "double",
+        min: 0,
+        max: 100000,
+        from: 0,
+        hide_from_to: true
+    });
 });

@@ -55,6 +55,32 @@
 
 }
 
+.irs--sharp .irs-min,
+.irs--sharp .irs-max {
+  display: none;
+}
+.irs--sharp .irs-bar {
+  height: 7px;
+  background-color: #f2f2f2;
+}
+
+.irs--sharp .irs-handle {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #45c366;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.irs--sharp .irs-line {
+  height: 4px;
+  top: 22px;
+  background-color: #bbbdbe;
+}
+
+.irs--sharp .irs-handle > i:first-child {
+  display: none;
+}
 @media all and (max-width: 520px) {
 
 }
