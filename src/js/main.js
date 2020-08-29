@@ -123,6 +123,7 @@ $(document).ready(function () {
         freeMode: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
+        allowTouchMove: false,
     });
     var galleryTop = new Swiper('.gallery-top', {
         spaceBetween: 10,

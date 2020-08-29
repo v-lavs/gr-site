@@ -101,13 +101,14 @@
     <main class="page page-catalog-vehicles">
         <section class="section-catalog">
             <div class="container">
-                <h1 class="section__title"><span class="green-color">Electric</span> vehicles</h1>
-                <div class="section__text">
-                    <p>Lorem ipsum dolor sit amet, consectetur sed do eiusmod tempor incididunt ut labore </p>
+                <div class="heading">
+                    <h1 class="section__title"><span class="green-color">Electric</span> vehicles</h1>
+                    <div class="section__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur sed do eiusmod tempor incididunt ut labore </p>
+                    </div>
                 </div>
                 <div class="filter-vehicles">
-
-                    <form action="#" class="form" method="post">
+                    <form action="#" class="form-catalog" method="post">
                         <div class="form__group">
                             <select name="monthly charges" class="custom-select form-control">
                                 <option data-display="Monatliche Kosten" value="none" hidden="">1 вариант</option>
@@ -150,26 +151,166 @@
                         <div class="more-option">
                             <h4 class="title">More<br>
                                 Options:</h4>
-                            <div class="form__group">
-                                <label for="range">Range: 0 - 1200 km</label>
-                                <input class="js-range-slider" type="range" min="0"
-                                       max="1200"
-                                       id="range"
-                                       value="50">
-                                <label for="battery">Range: 0 - 1200 km</label>
-                                <input class="js-range-slider" type="range" min="10"
-                                       max="200"
-                                       id="battery"
-                                       value="50">
-                                <label for="speed">Top Speed: 110 - 450 kmh</label>
-                                <input class="js-range-slider" type="range" min="110"
-                                       max="450"
-                                       id="speed"
-                                       value="50">
+                            <div class="range-box">
+                                <div class="wrap-range">
+                                    <label class="label-range" for="range">Range: 0 - 1200 km</label>
+                                    <input class="js-range-slider" type="range" min="0"
+                                           max="1200"
+                                           id="range"
+                                           value="50">
+                                </div>
+                                <div class="wrap-range">
+                                    <label class="label-range" for="battery">Range: 0 - 1200 km</label>
+                                    <input class="js-range-slider" type="range" min="10"
+                                           max="200"
+                                           id="battery"
+                                           value="50">
+                                </div>
+                                <div class="wrap-range">
+                                    <label class="label-range" for="speed">Top Speed: 110 - 450 kmh</label>
+                                    <input class="js-range-slider" type="range" min="110"
+                                           max="450"
+                                           id="speed"
+                                           value="50">
+                                    <div class="wrap-range">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </form>
                 </div>
+                <div class="vehicles-list">
+                    <div class="vehicles-list__item card-vehicles">
+                        <div class="card-vehicles__wrap-img">
+                            <img src="assets/img/Volkswagen_ID3-01.jpg" alt="" class="img img-vehicles">
+                        </div>
+                        <div class="card-vehicles__body">
+                            <h4 class="card-vehicles__title">Volkswagen ID.3 Pure</h4>
+                            <div class="modification">Battery Electric Vehicle - 49 kWh</div>
+                            <ul class="specifications-list">
+                                <li class="specifications-list__item">
+                                    <div class="part-left">0 - 100*</div>
+                                    <div class="part-right">10.0 sec</div>
+                                </li>
+                                <li class="specifications-list__item">
+                                    <div class="part-left">Top Speed</div>
+                                    <div class="part-right">160 km/h</div>
+                                </li>
+                                <li class="specifications-list__item">
+                                    <div class="part-left">Range*</div>
+                                    <div class="part-right">275 km</div>
+                                </li>
+                                <li class="specifications-list__item">
+                                    <div class="part-left">Efficiency*</div>
+                                    <div class="part-right">16.4 kWh</div>
+                                </li>
+                                <li class="specifications-list__item">
+                                    <div class="part-left">Fastcharge*</div>
+                                    <div class="part-right">260 km/h</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block-btn">
+                            <a href="#" class="btn btn_go">Gehen</a>
+                            <a href="single-car.html" class="btn">Lesen Sie</a>
+                            <span class="car-brand">Volkswagen ID.3 Pure</span>
+                        </div>
+
+                    </div>
+                    <div class="vehicles-list__item card-vehicles">
+                        <div class="card-vehicles__wrap-img">
+                            <img src="assets/img/Mini_Electric-01.jpg" alt="" class="img img-vehicles">
+                        </div>
+                        <div class="card-vehicles__body">
+                            <h4 class="card-vehicles__title">Mini Cooper SE</h4>
+                            <div class="modification">Battery Electric Vehicle - 49 kWh</div>
+                            <ul class="specifications-list">
+                                <li class="specifications-list__item">
+                                    <div class="part-left">0 - 100*</div>
+                                    <div class="part-right">7.3 sec</div>
+                                </li>
+                                <li class="specifications-list__item">
+                                    <div class="part-left">Top Speed</div>
+                                    <div class="part-right">150 km/h</div>
+                                </li>
+                                <li class="specifications-list__item">
+                                    <div class="part-left">Range*</div>
+                                    <div class="part-right">185 km</div>
+                                </li>
+                                <li class="specifications-list__item">
+                                    <div class="part-left">Efficiency*</div>
+                                    <div class="part-right">15.6 kWh</div>
+                                </li>
+                                <li class="specifications-list__item">
+                                    <div class="part-left">Fastcharge*</div>
+                                    <div class="part-right">260 km/h</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block-link-transition">
+                            <div class="wrap-btn">
+                                <a href="#" class="btn btn_go">Gehen</a>
+                                <a href="single-car.html" class="btn">Lesen Sie</a>
+                            </div>
+                            <span class="car-brand">Mini Cooper</span>
+                            <div class="brief-description">
+                                <div class="conditional-display">
+                                    <div class="conditional-display__item"><span class="round round_filled"></span>
+                                    </div>
+                                    <div class="conditional-display__item"><span class="round"></span></div>
+                                    <div class="conditional-display__item"><span class="battery">
+                                        <img src="assets/img/lighting.png" alt="" class="img"></span>
+                                    </div>
+                                </div>
+                                <p class="number-seats">
+                                    <img src="assets/img/people.png" alt="" class="img img-icon">
+                                    <span class="quantity">4</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <nav class="pagination">
+                    <ul class="pagination__list">
+                        <li class="pagination__item">
+                        <span class="pagination__btn pagination__btn_prev">
+                            <svg class="icon-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20"
+                                 height="20" viewBox="0 0 20 20">
+<title>chevron-thin-left</title>
+<path fill="#20b12e"
+      d="M13.891 17.418c0.268 0.272 0.268 0.709 0 0.979s-0.701 0.271-0.969 0l-7.83-7.908c-0.268-0.27-0.268-0.707 0-0.979l7.83-7.908c0.268-0.27 0.701-0.27 0.969 0s0.268 0.709 0 0.979l-7.141 7.419 7.141 7.418z"></path>
+</svg>
+                        </span>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="page-numbers" href="#">1</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="page-numbers" href="#">2</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="page-numbers  current" href="#">3</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="page-numbers" href="#">4</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="page-numbers" href="#">5</a>
+                        </li>
+                        <li class="pagination__item">
+                            <span class="pagination__btn pagination__btn_next">
+                      <svg class="icon-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                           viewBox="0 0 20 20">
+                        <title>chevron-thin-right</title>
+                        <path fill="#20b12e"
+                              d="M13.25 10l-7.141-7.42c-0.268-0.27-0.268-0.707 0-0.979 0.268-0.27 0.701-0.27 0.969 0l7.83 7.908c0.268 0.271 0.268 0.709 0 0.979l-7.83 7.908c-0.268 0.271-0.701 0.27-0.969 0s-0.268-0.707 0-0.979l7.141-7.417z"></path>
+                    </svg>
+                    </span>
+                        </li>
+                    </ul>
+                    <span class="pagination__text">Page 3 of 5</span>
+                </nav>
             </div>
         </section>
 

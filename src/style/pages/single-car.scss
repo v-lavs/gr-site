@@ -1,5 +1,4 @@
 .page-single-car {
-  padding-bottom: 0;
 
   .card-brand__title {
     color: #000000;
@@ -39,15 +38,19 @@
         height: 40px;
       }
     }
-
+    .gallery-top .product-slide {
+      padding-top: 54.5%;
+    }
+    .gallery-thumbs .gallery-thumbs__item,
     .gallery-top .product-slide {
       background-repeat: no-repeat;
       background-position: center center;
       -webkit-background-size: cover;
       background-size: cover;
-      padding-top: 54.5%;
     }
-
+    .gallery-thumbs__item.swiper-slide-thumb-active{
+      border: 2px solid #45c366;
+    }
   }
 
   .block-text {
