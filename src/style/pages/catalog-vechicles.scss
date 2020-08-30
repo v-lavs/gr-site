@@ -1,4 +1,16 @@
 .page-catalog-vehicles {
+  .page__header {
+    .container {
+      display: flex;
+      align-items: center;
+      .section__text{
+        margin-bottom: 0;
+      }
+      .section__title{
+        width: 53%;
+      }
+    }
+  }
 
   .heading {
     display: flex;
@@ -28,11 +40,15 @@
     .form__group {
       display: flex;
       justify-content: space-between;
+      margin-left: -10px;
+      margin-right: -10px;
       margin-bottom: 80px;
     }
 
     .custom-select {
       max-width: 240px;
+      margin: 0 10px;
+
     }
 
     .more-option {
@@ -77,112 +93,142 @@
     }
   }
 
+}
 
-  .section-catalog {
-    padding-bottom: 9%;
+.section-catalog {
+  padding-bottom: 9%;
 
-    .vehicles-list {
-      padding-top: 10px;
-      padding-bottom: 75px;
+  .vehicles-list {
+    padding-top: 10px;
+    padding-bottom: 75px;
 
+    &__item {
+      padding-top: 65px;
+      padding-bottom: 65px;
+    }
+  }
+
+  .card-vehicles {
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+
+    .modification {
+      font-size: 19px;
+      opacity: .6;
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      font-size: 31px;
+      font-weight: 600;
+    }
+
+    &__wrap-img {
+      width: 30%;
+      border-radius: 0 20px 0 0;
+      overflow: hidden;
+    }
+
+    &__body {
+      width: 40%;
+      padding-left: 80px;
+    }
+
+    .specifications-list {
       &__item {
-        padding-top: 65px;
-        padding-bottom: 65px;
+        display: flex;
+        padding: 5px 0;
+
+        .part-left,
+        .part-right {
+          width: 50%;
+        }
       }
 
-      .specifications-list {
+      .part-left {
+        font-size: 15px;
+        font-weight: 400;
+      }
 
-
+      .part-right {
+        font-size: 17px;
+        font-weight: 600;
       }
     }
 
-    .card-vehicles {
-      display: flex;
-      font-family: "Montserrat", sans-serif;
+    .block-link-transition {
+      width: 20%;
+      margin-left: auto;
 
-      .modification {
-        font-size: 19px;
-        opacity: .6;
+      .wrap-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+
+      .car-brand {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 27.31px;
+        color: #646464;
         margin-bottom: 40px;
       }
 
-      &__title {
-        font-size: 31px;
-        font-weight: 600;
-      }
 
-      &__wrap-img {
-        width: 30%;
-        border-radius: 0 20px 0 0;
-        overflow: hidden;
-      }
+    }
 
-      &__body {
-        width: 40%;
-        padding-left: 80px;
-      }
+    .brief-description {
+      display: flex;
+      justify-content: space-between;
+      max-width: 255px;
+      width: 100%;
+      margin: 0 auto;
+    }
 
-      .specifications-list {
-        &__item {
-          display: flex;
-          padding: 5px 0;
+    .conditional-display {
+      &__item {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 9px;
 
-          .part-left,
-          .part-right {
-            width: 50%;
-          }
-        }
-
-        .part-left {
-          font-size: 15px;
-          font-weight: 400;
-        }
-
-        .part-right {
-          font-size: 17px;
-          font-weight: 600;
+        &:first-child {
+          margin-left: 0;
         }
       }
 
-      .block-link-transition {
-        width: 30%;
+      .battery {
+        display: block;
+        width: 7px;
+        height: 19px;
       }
 
-      .brief-description {
-        display: flex;
-        justify-content: space-between;
+      .round {
+        display: block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #d0d0d0;
+        background-color: #ffffff;
+        border-radius: 50%;
+
+        &_filled {
+          background-color: #d0d0d0;
+        }
       }
+    }
 
-      .conditional-display {
-        &__item {
-          display: inline-block;
-          vertical-align: middle;
-          margin-left: 9px;
+    .number-seats {
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.46;
 
-          &:first-child {
-            margin-left: 0;
-          }
-        }
+      color: #20b12e;
 
-        .battery {
-          display: block;
-          width: 7px;
-          height: 19px;
-        }
-
-        .round {
-          display: block;
-          width: 16px;
-          height: 16px;
-          border: 1px solid #d0d0d0;
-          background-color: #ffffff;
-          border-radius: 50%;
-
-          &_filled {
-            background-color: #d0d0d0;
-          }
-
-        }
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 17px;
       }
     }
   }

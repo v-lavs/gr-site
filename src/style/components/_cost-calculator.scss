@@ -103,6 +103,10 @@
     line-height: 0.8;
     transition: .35s;
     z-index: 3;
+    & > * {
+      position: relative;
+      z-index: 1;
+    }
 
     .small-text {
       display: inline-block;

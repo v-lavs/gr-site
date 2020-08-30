@@ -63,15 +63,25 @@
     &:after {
       border-color: transparent transparent transparent #fff;
     }
+
     &:hover,
     &:focus {
       background-color: #fff;
-      color:  #30bc55;
+      color: #30bc55;
     }
+
     &:hover:after,
     &:focus:after {
-      border-color: transparent transparent transparent  #30bc55;
+      border-color: transparent transparent transparent #30bc55;
     }
+  }
+
+  &_no-border {
+    border: none;
+    box-shadow: 0 3px 27px rgba(21, 23, 23, 0.1);
+    background-color: #ffffff;
+    padding: 15px;
+    min-width: 132px;
   }
 
   &_round {
