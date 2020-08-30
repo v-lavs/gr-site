@@ -1,4 +1,5 @@
-/*  jQuery Nice Select - v1.1.0
+/*
+  CUSTOM SELECT WITH EXTENDED FUNCTIONALITY (forked from)=>  jQuery Nice Select - v1.1.0
     https://github.com/hernansartorio/jquery-nice-select
     Made by Hernán Sartorio  */
  
@@ -8,7 +9,7 @@
     
     // Methods
     if (typeof method == 'string') {      
-      if (method == 'update') {
+      if (method === 'update') {
         this.each(function() {
           var $select = $(this);
           var $dropdown = $(this).next('.nice-select');
@@ -23,7 +24,7 @@
             }
           }
         });
-      } else if (method == 'destroy') {
+      } else if (method === 'destroy') {
         this.each(function() {
           var $select = $(this);
           var $dropdown = $(this).next('.nice-select');
@@ -66,20 +67,23 @@
       var $dropdown = $select.next();
       var $options = $select.find('option');
       var $selected = $select.find('option:selected');
-      
-      $dropdown.find('.current').html($selected.data('display') || $selected.text());
+      var colorOption = $selected.data('color') ? '<span style="background-color: '+ $selected.data('color') +';" class="nice-select__color-value"></span>' : null;
+      $dropdown.find('.current').html(colorOption || $selected.data('display') || $selected.text());
       
       $options.each(function(i) {
         var $option = $(this);
         var display = $option.data('display');
+        var color = $option.data('color');
+        var colorOption = color ? '<span style="background-color: '+ color +';" class="nice-select__color-value"></span>' : null;
 
         $dropdown.find('ul').append($('<li></li>')
           .attr('data-value', $option.val())
           .attr('data-display', (display || null))
+          .attr('data-color', (color || null))
           .addClass('option' +
             ($option.is(':selected') ? ' selected' : '') +
             ($option.is(':disabled') ? ' disabled' : ''))
-          .html($option.text())
+          .html(colorOption || $option.text())
         );
       });
     }
@@ -120,9 +124,11 @@
       $dropdown.find('.selected').removeClass('selected');
       $option.addClass('selected');
       
-      var text = $option.data('display') || $option.text();
-      $dropdown.find('.current').text(text);
-      
+      // var text = $option.data('display') || $option.text();
+      // $dropdown.find('.current').text(text);
+      var colorOption = $option.data('color') ? '<span style="background-color: '+ $option.data('color') +';" class="nice-select__color-value"></span>' : null;
+      $dropdown.find('.current').html(colorOption || $option.data('display') || $option.text());
+console.log(colorOption)
       $dropdown.prev('select').val($option.data('value')).trigger('change');
     });
 

@@ -5,6 +5,21 @@
   height: 100%;
   border-radius: 10px;
   line-height: 1.88;
+  &.full-width {
+    width: 100%;
+  }
+
+  &_multiline {
+    .option,
+    .current {
+      white-space: normal;
+      line-height: 1.2;
+    }
+    .option {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
 
   &:after {
     position: absolute;
@@ -31,11 +46,17 @@
     border-radius: 0 0 15px 15px;
   }
 
+  &__color-value {
+    display: inline-block;
+    height: 20px;
+    width: 80px;
+  }
+
   .option {
     display: flex;
     align-items: center;
     font-size: 17px;
-    height: 40px;
+    min-height: 40px;
   }
 
   .option.focus,
@@ -45,5 +66,17 @@
 
   &.open:after {
     transform: rotate(-180deg);
+  }
+
+}
+.page-rental{
+  .nice-select{
+    border: none;
+    box-shadow: 0 3px 15px rgba(21, 23, 23, 0.1);
+    .current {
+      font-family: $primary-font;
+      font-size: 18px;
+      font-weight: 300;
+    }
   }
 }

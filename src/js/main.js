@@ -3,7 +3,7 @@
  * */
 
 //= include ../lib/jquery-3.3.1.min.js
-//= include ../lib/jquery-nice-select-1.1.0/js/jquery.nice-select.js
+//= include ../lib/custom-select/js/jquery.nice-select.js
 //= include ../lib/range-slider/ion.rangeSlider.min.js
 
 
@@ -175,12 +175,16 @@ $(document).ready(function () {
         var resizedWindowWidth = $(window).width();
 
         if (windowW !== resizedWindowWidth) {
-            swiperReviews.destroy(true, true);
+            if(swiperReviews && swiperReviews.initialized) {
+                swiperReviews.destroy(true, true);
+            }
 
             if ($(window).width() < 768 && !logoSliderMob) {
                 logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
             } else {
-                logoSliderMob.destroy();
+                if(logoSliderMob && logoSliderMob.initialized){
+                    logoSliderMob.destroy();
+                }
             }
 
             windowW = resizedWindowWidth;

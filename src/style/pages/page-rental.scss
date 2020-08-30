@@ -1,7 +1,210 @@
-.page-rental{
-  .page__header{
-    .section__text{
+.page-rental {
+  .page__header {
+    .section__text {
       margin-bottom: 0;
+    }
+  }
+
+  .decor-dashed:after {
+    width: 100%;
+  }
+
+  .rental-step {
+    display: flex;
+    align-items: flex-start;
+
+    .part-left {
+      flex-shrink: 0;
+      width: 520px;
+    }
+
+    .part-right {
+      flex-grow: 1;
+    }
+  }
+}
+
+.form-choose{
+  position: relative;
+  padding-right: 13.5%;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 160px;
+    bottom: 0;
+    width: 1px;
+    background-color: #111719;
+    opacity: 0.1;
+    right: 0;
+  }
+  .form__header {
+    margin-bottom: 75px;
+  }
+
+  .form-group__item {
+    width: 50%;
+  }
+
+  .custom-select {
+    min-height: 49px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    line-height: 1;
+    cursor: pointer;
+    &:after {
+      display: none;
+    }
+    .current {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      font-weight: 300;
+    }
+  }
+
+  .input {
+    text-align: center;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-group {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(#111719, 0.1);
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  .option {
+    justify-content: center;
+  }
+}
+
+.section-lease-order {
+  padding-top: 40px;
+
+  .rental-step {
+    padding-bottom: 8%;
+    position: relative;
+
+    .part-right {
+      width: 60%;
+      padding-left: 6%;
+      z-index: 2;
+
+      &__name {
+        display: inline-block;
+        font-family: $primary-font;
+        font-size: 30px;
+        color: #bcbcbc;
+        font-weight: 300;
+        margin-bottom: 20px;
+      }
+    }
+
+    .mark-step {
+      position: absolute;
+      right: -3%;
+      bottom: 22%;
+      display: inline-block;
+      font-family: $primary-font;
+      font-size: 21px;
+      font-weight: 500;
+      color: #000000;
+      opacity: .18;
+      transform: rotate(-90deg);
+      z-index: 2;
+
+    }
+
+    .block-preview {
+
+      &__wrap-img {
+        width: 100%;
+      }
+
+      &__details {
+        font-family: $primary-font;
+        display: flex;
+        width: 80%;
+        padding: 15px;
+        justify-content: space-between;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      &__label {
+        font-size: 15px;
+        font-weight: 400;
+        color: #979797;
+        margin-bottom: 20px;
+      }
+
+      &__value {
+        font-size: 21px;
+        font-weight: 500;
+        color: #3bb82b;
+      }
+    }
+  }
+
+  .block-location {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 21%;
+      height: 28%;
+      z-index: 2;
+      background-image: url(../assets/img/big-mark.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: contain;
+      background-size: contain;
+      right: -5%;
+      top: -7%;
+    }
+  }
+
+  .block-location {
+    padding-right: 6%;
+
+    .text-map {
+      text-align: center;
+      opacity: 0.5;
+      font-family: $primary-font;
+      font-size: 15px;
+      font-weight: 300;
+      color: #000000;
+    }
+
+    &__wrap-map {
+      width: 100%;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      height: 0;
+      margin-bottom: 55px;
+
+      .map {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  .carsharing {
+    padding-top: 8%;
+
+    .part-right__name {
+      margin-bottom: 55px;
     }
   }
 }

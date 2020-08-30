@@ -106,11 +106,192 @@
                     <p>Lorem ipsum dolor sit amet, consectetur sed do eiusmod tempor incididunt ut labore </p>
                 </div>
             </div>
-        </div>
 
+            <section class="section-lease-order">
+                <div class="rental-step decor-dashed">
+                    <div class="part-left block-choice-car">
+                        <form action="#" method="post" class="form form-ordering form-choose">
+                            <div class="form__header">
+                                <h3 class="form__heading">Wähle Dein Fahrzeug*</h3>
+                                <p class="form__text">
+                                    *Anfrage/Buchung kann 48h vor dem Termin kostenfrei storniert werden
+                                </p>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group__item block-required">
+                                    <label for="car" class="form-group__title">Саr</label>
+                                </div>
+                                <div class="form-group__item">
+                                    <select name="car" id="car"
+                                            class="custom-select nice-select_multiline full-width form-control">
+                                        <option selected value="1">Tesla Model 3</option>
+                                        <option value="2">второй вариант</option>
+                                        <option value="3">третий вариант</option>
+                                    </select>
+                                </div>
+                            </div>
 
-        <section class="section section-ordering">
-            <div class="container">
+                            <div class="form-group">
+                                <div class="form-group__item">
+                                    <label class="form-group__title">Extras</label>
+                                </div>
+                                <div class="form-group__item">
+                                    <div class="extras-block">
+                                        <select name="extras" id="extras"
+                                                class="custom-select nice-select_multiline full-width form-control">
+                                            <option value="3">€ 10.00 / Buchung<br>
+                                                und Zusatzfahrer
+                                            </option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-group__item">
+                                    <label class="form-group__title">Color</label>
+                                </div>
+                                <div class="form-group__item">
+                                    <select name="color" id="color" class="custom-select full-width form-control">
+                                        <option value="3" data-color="#dfdfdf">color1</option>
+                                        <option value="2" data-color="#000">color2</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-group__item">
+                                    <label class="form-group__title">Mietdauer, Tage</label>
+                                </div>
+                                <div class="form-group__item">
+                                    <input class="input" type="text" value="1">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-group__item block-required">
+                                    <label class="form-group__title">Gesamt</label>
+                                </div>
+                                <div class="form-group__item">
+                                    <div class="total-price input">
+                                        202,00 €
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="part-right block-preview">
+                        <span class="part-right__name"><p>Tesla Model 3</p></span>
+                        <div class="block-preview__wrap-img">
+                            <img src="assets/img/tild3166-3061-4639-a665-656535316434__model3-1.png" alt="" class="img">
+                        </div>
+                        <div class="block-preview__details">
+                            <div class="block-preview__detail">
+                                <div class="block-preview__label">0-100 km/h</div>
+                                <div class="block-preview__value">4,4 Sek.</div>
+                            </div>
+                            <div class="block-preview__detail">
+                                <div class="block-preview__label">Reichweite</div>
+                                <div class="block-preview__value">502 km</div>
+                            </div>
+                            <div class="block-preview__detail">
+                                <div class="block-preview__label">Höchstgeschwindigkeit</div>
+                                <div class="block-preview__value">225 km/h</div>
+                            </div>
+                            <div class="block-preview__detail">
+                                <div class="block-preview__label">Motorleistung</div>
+                                <div class="block-preview__value">420 PS</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mark-step">Step 1 of 3</div>
+                </div>
+
+                <div class="rental-step carsharing decor-dashed">
+                    <div class="part-left">
+                        <form action="#" method="post" class="form form-ordering form-choose">
+                            <div class="form__header">
+                                <h3 class="form__heading">Premium Carsharing in Austria</h3>
+                                <p class="form__text">
+                                    *Anfrage/Buchung kann 48h vor dem Termin kostenfrei storniert
+                                </p>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group__item block-required">
+                                    <label for="car" class="form-group__title">
+                                        Abholdatum* <br>
+                                        Abgabetermin*
+                                    </label>
+                                </div>
+                                <div class="form-group__item">
+                                    <div class="input">
+                                        <span>2019 / 11 / 08</span><br>
+                                        <span>2019 / 11 / 08</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group__item block-required">
+                                    <label for="car" class="form-group__title">
+                                        Abholzeit* <br>
+                                        Abgabezeit*
+                                    </label>
+                                </div>
+                                <div class="form-group__item">
+                                    <div class="input">
+                                        <span>11:10</span><br>
+                                        <span>11:10</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group__item block-required">
+                                    <label for="stadt" class="form-group__title">
+                                        Stadt*
+                                    </label>
+                                </div>
+                                <div class="form-group__item">
+                                    <select name="stadt" id="stadt"
+                                            class="custom-select nice-select_multiline full-width form-control">
+                                        <option selected value="1">Wien</option>
+                                        <option value="2">Klagenfurt</option>
+                                        <option value="3">Linz</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group__item block-required">
+                                    <label for="station" class="form-group__title">
+                                        Station in Wien*
+                                    </label>
+                                </div>
+                                <div class="form-group__item">
+                                    <select name="station" id="station"
+                                            class="custom-select nice-select_multiline full-width form-control">
+                                        <option selected value="1">Greenride Büro bei
+                                            Tesla Supercharger...
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="part-right block-location">
+                        <span class="part-right__name"><p>Stadt</p></span>
+                        <div class="block-location__wrap-map">
+                            <img src="assets/img/location-stat.png" alt="" class="map">
+                        </div>
+                        <div class="text-map">
+                            <p>*Anfrage/Buchung kann 48h vor dem Termin kostenfrei storniert werden</p>
+                        </div>
+                    </div>
+                    <div class="mark-step">Step 2 of 3</div>
+                </div>
+            </section>
+
+            <section class="section section-ordering">
                 <form action="#" method="post" class="form form-ordering form-ordering_horizontal">
                     <div class="form__header">
 
@@ -232,9 +413,8 @@
                         <button class="btn btn_go">Gehen</button>
                     </div>
                 </form>
-            </div>
-        </section>
-
+            </section>
+        </div>
     </main>
 
 </div>

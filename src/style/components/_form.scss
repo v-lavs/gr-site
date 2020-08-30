@@ -1,6 +1,10 @@
 .form {
   font-family: "GothamPro", sans-serif;
 
+  &-group {
+    display: flex;
+  }
+
   .input {
     display: inline-block;
     width: 100%;
@@ -92,9 +96,10 @@
     background-color: $light-green-200;
   }
 
-  .block-required{
+  .block-required {
     position: relative;
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       display: block;
