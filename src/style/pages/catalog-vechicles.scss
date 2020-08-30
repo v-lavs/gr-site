@@ -3,10 +3,12 @@
     .container {
       display: flex;
       align-items: center;
-      .section__text{
+
+      .section__text {
         margin-bottom: 0;
       }
-      .section__title{
+
+      .section__title {
         width: 53%;
       }
     }
@@ -131,7 +133,7 @@
 
     &__body {
       width: 40%;
-      padding-left: 80px;
+      padding-left: 5%;
     }
 
     .specifications-list {
@@ -157,14 +159,19 @@
     }
 
     .block-link-transition {
-      width: 20%;
-      margin-left: auto;
+      //width: 20%;
+      //margin-left: auto;
+      padding-left: 7%;
 
       .wrap-btn {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 24px;
+      }
+
+      .btn_go {
+        margin-right: 30px;
       }
 
       .car-brand {
@@ -230,6 +237,14 @@
         height: 20px;
         margin-right: 17px;
       }
+    }
+  }
+}
+
+@include respond-to($screen-md) {
+  .section-catalog {
+    .card-vehicles .block-link-transition {
+      padding-left: 1%;
     }
   }
 }
