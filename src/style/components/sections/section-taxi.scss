@@ -1,0 +1,64 @@
+.section-taxi {
+  .container-default {
+    display: flex;
+    align-items: center;
+  }
+  .left-part,
+  .right-part {
+    width: 50%;
+  }
+
+  .left-part {
+    display: flex;
+  }
+
+  .right-part {
+    padding-left: 6%;
+  }
+
+  .media-wrap {
+    display: flex;
+    &__item {
+      width: 50%;
+      padding: 45px 25px;
+      border-right: 1px solid #cecece;
+      &:last-child {
+        border-right: none;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .section__title {
+    display: flex;
+    align-items: center;
+  }
+  .section__sub-title {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .section__review {
+    padding-left: 30px;
+    border-left: 1px solid #45c366;
+    margin-bottom: 75px;
+    p {
+      margin-bottom: 45px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .logo-strip {
+    width: 20%;
+    background-color: #45c366;
+  }
+
+  .section__content {
+    padding: 50px 20% 50px 12%;
+  }
+}
