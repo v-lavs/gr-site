@@ -86,7 +86,7 @@
       text-align: center;
       letter-spacing: -0.03rem;
       z-index: 5;
-
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 
       @supports (-webkit-text-stroke: 2px #fff) {
         color: transparent;
@@ -140,6 +140,18 @@
 
       pointer-events: none;
       z-index: 1;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      top: 20px;
+      background-color: rgba(255, 255, 255, 0.15);
+      pointer-events: none;
+      z-index: 0;
     }
 
     &_top {
@@ -250,7 +262,6 @@
     border: 1px solid $white;
   }
 }
-
 .section-grid {
   position: absolute;
   display: flex;
@@ -562,7 +573,7 @@
 
     .link_bottom {
       .inner {
-        padding-top: 19vh;
+        padding-top: 17vh;
       }
     }
     .link_right {

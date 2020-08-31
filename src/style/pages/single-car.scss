@@ -127,15 +127,18 @@
     }
 
     td {
-      padding-left: 70px;
+      padding-left: 5px;
       padding-right: 5px;
       padding-top: 10px;
       padding-bottom: 10px;
+      &:nth-of-type(1) {
+        width: 9%;
+      }
+      &:nth-of-type(4) {
+        width: 21%;
+      }
 
-      &:nth-of-type(even) {
-
-        padding-right: 30%;
-        padding-left: 5px;
+      &:nth-of-type(3) {
         text-align: right;
       }
     }
@@ -161,3 +164,13 @@
   }
 }
 
+@include respond-to($screen-md) {
+  .section-specifications {
+    .wrap-table {
+      width: 46%;
+      td:nth-of-type(4) {
+        width: 9%;
+      }
+    }
+  }
+}

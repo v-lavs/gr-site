@@ -93,13 +93,7 @@
     position: fixed;
     right: 5%;
     bottom: 10%;
-
-    &:hover,
-    &:focus {
-      .letter {
-        fill: $light-green-200;
-      }
-    }
+    background-color: $light-green-200;
   }
 }
 
