@@ -1,13 +1,11 @@
 .page-buy {
   .page__header {
-    display: flex;
-    align-items: center;
     margin-bottom: 80px;
-    font-family: $secondary-font;
     font-size: 17px;
 
     .section__title {
       width: 36%;
+      flex-shrink: 0;
       margin-right: 45px;
     }
   }
@@ -88,6 +86,7 @@
       max-width: 1440px;
       width: 50vw;
       flex-shrink: 0;
+
       img {
         width: 100%;
       }
@@ -95,6 +94,7 @@
 
     .right-part {
       padding-left: 8%;
+      padding-right: 3%;
     }
   }
 
@@ -168,6 +168,89 @@
 
     &__img-wrap {
       padding: 300px 0;
+    }
+  }
+}
+
+@include respond-to($screen-md) {
+  .page-buy {
+    .single-car-card {
+      .right-part {
+        padding-left: 6%;
+      }
+    }
+
+    .single-car-card__title {
+      margin-bottom: 10px;
+    }
+
+    .single-car-card__header {
+      margin-bottom: 20px;
+    }
+
+    .single-car-card__details {
+      padding: 30px 0;
+    }
+
+    .car-info {
+      padding-top: 9rem;
+    }
+  }
+}
+
+@include respond-to($md) {
+  .page-buy {
+    .page__header {
+      margin-bottom: 45px;
+    }
+
+    .single-car-card {
+      .container-default {
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .right-part {
+        padding-left: 0;
+      }
+
+      .right-part,
+      .left-part {
+        width: 100%;
+      }
+
+      .img-wrap {
+        width: 100%;
+        margin-bottom: 45px;
+      }
+    }
+
+    .car-info {
+      padding-top: 6rem;
+
+      &__img-wrap {
+        padding: 160px 0;
+      }
+
+      .container {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .page-buy .car-info {
+    &__table {
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    &__cell {
+      font-size: 18px;
+      width: 50%;
+      padding: 20px;
     }
   }
 }

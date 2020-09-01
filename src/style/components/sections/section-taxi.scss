@@ -120,14 +120,6 @@
 
 @include respond-to($lg) {
   .section-taxi {
-    .right-part:before {
-      bottom: -6%;
-    }
-  }
-}
-
-@include respond-to($lg) {
-  .section-taxi {
     .right-part {
       &:before {
         bottom: -6%;
@@ -137,18 +129,6 @@
 }
 
 @include respond-to($sm) {
-  .section-taxi {
-    .section__content {
-      padding-right: 7%;
-    }
-
-    .right-part {
-      padding-left: 3%;
-    }
-  }
-}
-
-@include respond-to($xs) {
   .section-taxi {
     padding-bottom: 17%;
 
@@ -165,9 +145,13 @@
     .left-part {
       width: 100%;
     }
+    .section__content {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
 
     .right-part {
-      width: 70%;
+      width: 100%;
       padding-left: 0;
 
       &:before {
@@ -178,8 +162,11 @@
   }
 }
 
-@media all and (max-width: 460px) {
+@include respond-to($xs) {
   .section-taxi{
+    .logo-strip {
+      width: 40px;
+    }
     .media-wrap__item {
       padding: 15px;
     }

@@ -137,7 +137,6 @@
     }
 
     .block-preview {
-
       &__wrap-img {
         width: 100%;
       }
@@ -145,7 +144,7 @@
       &__details {
         font-family: $primary-font;
         display: flex;
-        width: 80%;
+        max-width: 840px;
         padding: 15px;
         justify-content: space-between;
         text-align: center;
@@ -222,6 +221,19 @@
 
     .part-right__name {
       margin-bottom: 55px;
+    }
+  }
+}
+
+@include respond-to($lg) {
+  .section-lease-order .rental-step .part-right {
+    padding-left: 0;
+  }
+
+  .page-rental {
+    .rental-step .part-left {
+      width: 460px;
+      padding-right: 45px;
     }
   }
 }

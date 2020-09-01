@@ -90,8 +90,8 @@
         height: 50px;
         background-position: center center;
         background-repeat: no-repeat;
-        -webkit-background-size: auto;
-        background-size: auto;
+        -webkit-background-size: contain;
+        background-size: contain;
         left: 0;
         top: 0;
         z-index: 1;
@@ -121,7 +121,6 @@
     padding-bottom: 120px;
 
     table {
-      table-layout: fixed;
       width: 100%;
       font-size: 17px;
     }
@@ -202,13 +201,16 @@
     }
   }
 }
+
 @include respond-to($sm) {
   .section-product-car {
     .d-flex {
       flex-wrap: wrap;
       width: 100%;
+      margin-bottom: 30px;
     }
     .section__title {
+      font-size: 28px;
       text-align: center;
     }
     .slider-gallery-wrap {
@@ -232,6 +234,103 @@
           margin-right: 0;
         }
       }
+    }
+  }
+
+  .section-specifications {
+    .container-default {
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .wrap-table {
+      width: 100%;
+      padding-bottom: 90px;
+    }
+    .caption {
+      padding: 0 0 45px;
+      text-align: center;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-product-car {
+    .container-default {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .section__title {
+      margin-bottom: 45px;
+    }
+    .right-part {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .product-details {
+      &__item {
+        width: 33.33%;
+        flex-shrink: 0;
+        padding-top: 75px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-right: auto;
+        text-align: center;
+        .bg-icon {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-product-car {
+    .section__title {
+      font-size: 22px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      max-width: 380px;
+      margin: auto;
+      text-align: center;
+    }
+    .product-details {
+      flex-wrap: wrap;
+      margin:0 auto 30px;
+      max-width: 380px;
+      min-width: 0;
+      &__item {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+        text-align: left;
+        .bg-icon {
+          position: static;
+          width: 40px;
+          height: 40px;
+          margin-right: 20px;
+          transform: none;
+        }
+      }
+    }
+  }
+
+  .section-specifications {
+    .wrap-table{
+      table {
+        font-size: 16px;
+      }
+      td:nth-of-type(1) {
+        width: 5%;
+      }
+    }
+    .caption {
+      padding-bottom: 30px;
+      font-size: 21px;
     }
   }
 }

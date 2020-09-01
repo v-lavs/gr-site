@@ -177,13 +177,17 @@
 
 @include respond-to($xxs) {
   .section-rental-conditions {
+    .section__title {
+      margin-bottom: 40px;
+    }
     .part-right {
       .link-FAQ {
-        font-size: 30px;
+        font-size: 28px;
       }
     }
   }
 }
+
 
 @media all and (max-width: 480px) {
   .section-rental-conditions {

@@ -106,6 +106,22 @@
   margin: auto;
 }
 
+@include respond-to($sm) {
+  .btn {
+    font-size: 18px;
+  }
+}
+
+@include respond-to($xs) {
+  .btn {
+    font-size: 16px;
+  }
+  
+  .btn_go {
+    text-align: center;
+  }
+}
+
 @include respond-to($xxs) {
   .btn_round {
     height: 55px;

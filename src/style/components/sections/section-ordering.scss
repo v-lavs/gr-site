@@ -7,17 +7,21 @@
       .label-checkmark {
         width: 100%;
       }
+
       .form-group {
         padding-bottom: 45px;
       }
     }
+
     &.form-ordering_horizontal {
       .fieldboxs {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
         &-part {
           width: 36%;
+
           &:last-of-type {
             width: 20%;
             max-width: 495px;
@@ -34,9 +38,11 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+
       &:last-of-type {
         padding-bottom: 0;
       }
+
       &_vertical {
         flex-direction: column;
       }
@@ -45,10 +51,11 @@
     .fieldboxs-part {
       padding: 0 20px;
 
-      .input_small{
+      .input_small {
         width: 100%;
         max-width: 257px;
       }
+
       .form-group-small {
         width: 45%;
 
@@ -84,5 +91,28 @@
 
   .form__footer {
     padding-top: 70px;
+  }
+}
+
+@include respond-to($lg) {
+  .section-ordering {
+    .form-ordering.form-ordering_horizontal {
+      .fieldboxs-part {
+        width: 50%;
+        &:last-of-type {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .section-ordering {
+    padding-bottom: 160px;
+
+    .form__footer {
+      padding-top: 20px;
+    }
   }
 }

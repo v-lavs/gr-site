@@ -118,3 +118,44 @@
 
 }
 
+@include respond-to($sm) {
+  .form {
+    .form-group {
+      &__title {
+        font-size: 18px;
+      }
+    }
+
+    .input {
+      font-size: 16px;
+    }
+
+    .label-checkmark {
+      font-size: 16px;
+    }
+    .form__text {
+      font-size: 14px;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .form {
+    .form-group {
+      &__title {
+        font-size: 16px;
+      }
+    }
+
+    .input {
+      font-size: 14px;
+    }
+
+    .label-checkmark {
+      font-size: 14px;
+    }
+    .form__text {
+      font-size: 12px;
+    }
+  }
+}

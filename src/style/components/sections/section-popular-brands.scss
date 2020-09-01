@@ -291,7 +291,11 @@
   .section-popular-brands {
 
     .form__description {
-      text-align: left;
+      &:before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      text-align: center;
     }
 
     .block-view-brands {

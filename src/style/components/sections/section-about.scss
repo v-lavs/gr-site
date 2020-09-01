@@ -116,9 +116,32 @@
   .section-about {
     .goals {
       flex-wrap: wrap;
-      .goals-card{
+
+      .goals-card {
         width: 100%;
+        &:before {
+          top: 0;
+        }
       }
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-about {
+    .goals-card {
+      padding-left: 30px;
+
+      &:nth-child(n) .goals-card__title {
+        &:after,
+        &:before {
+          left: -38px;
+        }
+      }
+    }
+
+    .goals-card__title {
+      font-size: 18px;
     }
   }
 }

@@ -66,6 +66,7 @@
 @include respond-to($lg) {
   .section-rent {
     .condition-list {
+      padding-top: 70px;
       &__item {
         font-size: 14px;
       }
@@ -78,28 +79,32 @@
     .condition-list {
       &__item {
         width: 50%;
-        font-size: 14px;
+        font-size: 15px;
         padding-left: 45px;
         margin-bottom: 80px;
         &:before {
           font-size: 60px;
         }
       }
-      &__title {
-        font-size: 18px;
-      }
     }
   }
 }
 
-@include respond-to($xxs) {
+@include respond-to($xs) {
   .section-rent {
     .condition-list {
+      &__title {
+        font-size: 18px;
+      }
       &__item {
+        font-size: 16px;
         width: 100%;
         max-width: 480px;
         margin: 0 auto 60px;
         padding-right: 0;
+        &:before {
+          font-size: 52px;
+        }
       }
     }
   }
