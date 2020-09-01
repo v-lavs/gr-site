@@ -153,10 +153,20 @@
 @include respond-to($xs){
   .header{
     &_top {
-      padding-top: 10px;
+      padding-top: 45px;
       padding-bottom: 10px;
+      flex-wrap: wrap;
       .logo-site {
         max-width: 125px;
+        top: 5px;
+        transform: translate(-50%, 0);
+      }
+    }
+    .description{
+      text-align: right;
+      font-size: 10px;
+      .text{
+        font-size: 11px;
       }
     }
     &_bottom{
