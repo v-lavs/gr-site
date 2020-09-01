@@ -47,18 +47,20 @@
     width: 55%;
 
   }
-.bg-view-brands{
-  position: absolute;
-  width: calc(50vw + 13%);
-  right: -13%;
-  bottom: 0;
-  top: 0;
-  background-position: right 0;
-  -webkit-background-size: auto;
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
+
+  .bg-view-brands {
+    position: absolute;
+    width: calc(50vw + 13%);
+    right: -13%;
+    bottom: 0;
+    top: 0;
+    background-position: right 0;
+    -webkit-background-size: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
   .brands {
     display: flex;
     flex-wrap: wrap;
@@ -156,6 +158,7 @@
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
     margin-bottom: 12px;
+
     .wrap-icon {
       height: 18px;
     }
@@ -195,11 +198,13 @@
     .brands {
       margin: 0 -10px;
     }
-    .bg-view-brands{
+
+    .bg-view-brands {
 
       width: calc(50vw + 28px);
       right: -28%;
     }
+
     .brands__item {
       padding-left: 20px;
       padding-right: 20px;
@@ -227,9 +232,11 @@
       padding-left: 10px;
 
     }
-    .bg-view-brands{
+
+    .bg-view-brands {
       width: calc(50vw + 28%);
     }
+
     .brands__item {
       width: 46%;
     }
@@ -243,10 +250,11 @@
       flex-wrap: wrap;
     }
 
-    .block-view-brands{
+    .block-view-brands {
       width: 100%;
       padding-left: 0;
     }
+
     .content-section {
       width: 100%;
     }
@@ -267,9 +275,10 @@
 
 @include respond-to($sm) {
   .section-popular-brands {
-    .brands{
+    .brands {
       margin: 0 -5px;
     }
+
     .brands__item {
       padding-left: 10px;
       padding-right: 10px;
@@ -338,6 +347,8 @@
     .brands__item {
       padding-left: 7px;
       padding-right: 7px;
+      width: 100%;
+      max-width: 300px;
     }
 
     .card__link {
@@ -346,6 +357,29 @@
 
     .custom-select {
       width: 100%;
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .section-popular-brands {
+    .form__footer {
+      flex-wrap: wrap;
+    }
+
+    .form-choose {
+      margin-bottom: 50px;
+    }
+
+    .filter-brand {
+      .wrap-btn {
+        margin-top: 25px;
+        width: 100%;
+      }
+
+      .form__description {
+        width: 100%;
+      }
     }
   }
 }
