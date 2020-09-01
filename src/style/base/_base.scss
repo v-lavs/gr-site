@@ -30,6 +30,13 @@ body {
     padding: 0 20px;
   }
 
+  @include respond-to($sm) {
+    padding: 0 10px;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 img {
@@ -91,6 +98,7 @@ img {
     z-index: 2;
   }
 }
+
 .page__header {
   display: flex;
   align-items: center;
@@ -102,7 +110,21 @@ img {
     width: 36%;
     margin-right: 45px;
   }
+
+  @include respond-to($sm) {
+    &,
+    .container {
+      text-align: center;
+      flex-wrap: wrap;
+    }
+    .section__title {
+      width: 100% !important;
+      margin-right: 0;
+    }
+  }
 }
+
+
 .section {
   padding-top: 8%;
   padding-bottom: 8%;
@@ -129,7 +151,6 @@ img {
     color: #30bc55;
   }
 
-
   &_big {
     font-size: 52px;
     max-width: 80%;
@@ -138,6 +159,9 @@ img {
 
 .page {
   padding-top: 95px;
+  @include respond-to($sm) {
+    padding-top: 60px;
+  }
 }
 
 .pagination {
@@ -183,19 +207,41 @@ img {
     width: 42px;
     height: 42px;
     padding: 5px;
-    .icon-svg{
+
+    .icon-svg {
       width: 100%;
       height: 100%;
       display: block;
     }
-    &_prev{
+
+    &_prev {
       margin-right: 30px;
     }
-    &_next{
+
+    &_next {
       margin-left: 30px;
     }
   }
 
+  @include respond-to($sm) {
+    .page-numbers {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+
+  @include respond-to($xs) {
+    .page-numbers {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .pagination__btn_prev {
+      margin-right: 10px;
+    }
+    .pagination__btn_next {
+      margin-left: 10px;
+    }
+  }
 }
 
 
@@ -207,6 +253,17 @@ img {
       font-size: 42px;
       max-width: 100%;
     }
+  }
+}
+
+@include respond-to($sm) {
+  .section__title {
+    font-size: 30px;
+  }
+}
+@include respond-to($xxs) {
+  .section__title {
+    font-size: 24px;
   }
 }
 

@@ -1,27 +1,30 @@
-.section-rent{
+.section-rent {
   padding-bottom: 40px;
-  .section__title{
+
+  .section__title {
     text-align: center;
   }
-  .condition-list{
-    font-family: "Gotham Pro",sans-serif;
+
+  .condition-list {
+    font-family: 'Montserrat', sans-serif;
     counter-reset: list;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 100px;
-    &__item{
+
+    &__item {
       position: relative;
       width: 27%;
       color: #706f6f;
-      font-family: 'Montserrat',sans-serif;
       font-size: 16px;
       font-weight: 400;
       padding-top: 5px;
       padding-left: 70px;
       padding-right: 30px;
-      margin-bottom: 9%;
-      &:before{
+      margin-bottom: 160px;
+
+      &:before {
         counter-increment: list;
         content: counter(list) " ";
         position: absolute;
@@ -34,11 +37,70 @@
         line-height: .79;
       }
     }
-    .card__title{
+
+    &__title {
+      font-family: $primary-font;
       color: #000000;
       font-size: 24px;
       font-weight: 500;
+      margin-bottom: 15px;
     }
+  }
+}
 
+@include respond-to($screen-md) {
+  .section-rent {
+    .condition-list {
+      &__item {
+        width: 32%;
+        margin-bottom: 100px;
+      }
+
+      &__title {
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+@include respond-to($lg) {
+  .section-rent {
+    .condition-list {
+      &__item {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include respond-to($md) {
+  .section-rent {
+    .condition-list {
+      &__item {
+        width: 50%;
+        font-size: 14px;
+        padding-left: 45px;
+        margin-bottom: 80px;
+        &:before {
+          font-size: 60px;
+        }
+      }
+      &__title {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-rent {
+    .condition-list {
+      &__item {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto 60px;
+        padding-right: 0;
+      }
+    }
   }
 }

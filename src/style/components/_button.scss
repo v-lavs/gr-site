@@ -50,7 +50,9 @@
       right: 32px;
       top: 50%;
       transform: translateY(-50%);
-
+      @include respond-to($md) {
+        right: 20px;
+      }
     }
 
     &:hover:after,
