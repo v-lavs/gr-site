@@ -40,13 +40,15 @@
     &:nth-child(even) {
       width: 55%;
       background-color: rgba(10, 12, 12, .03);
-      &:before{
+
+      &:before {
         bottom: 0;
         top: 0;
       }
-      .goals-card__title{
+
+      .goals-card__title {
         &:after,
-        &:before{
+        &:before {
           left: -16.75%;
         }
       }
@@ -58,8 +60,9 @@
       font-weight: 600;
       padding-bottom: 25px;
       margin-bottom: 30px;
+
       &:after,
-      &:before{
+      &:before {
         position: absolute;
         content: '';
         display: block;
@@ -67,39 +70,56 @@
         z-index: 1;
         background-color: #23c04c;
       }
-      &:before{
+
+      &:before {
         width: 50%;
         bottom: 0;
         height: 1px;
       }
-      &:after{
+
+      &:after {
         bottom: -8.5px;
         width: 17px;
         height: 17px;
         border-radius: 50%;
       }
     }
-    &__body{
+
+    &__body {
       max-width: 387px;
     }
   }
 }
 
 @include respond-to($md) {
- .section-about {
-   .goals-card {
-     padding-left: 45px;
-     padding-top: 45px;
-     padding-right: 20px;
-     &:nth-child(n) {
-       width: 50%;
-       .goals-card__title {
-         &:after,
-         &:before {
-           left: -53px;
-         }
-       }
-     }
-   }
- }
+  .section-about {
+    .goals-card {
+      padding-left: 45px;
+      padding-top: 45px;
+      padding-right: 20px;
+
+      &:nth-child(n) {
+        width: 50%;
+
+        .goals-card__title {
+          &:after,
+          &:before {
+            left: -53px;
+          }
+        }
+      }
+    }
+  }
 }
+
+@include respond-to($xs) {
+  .section-about {
+    .goals {
+      flex-wrap: wrap;
+      .goals-card{
+        width: 100%;
+      }
+    }
+  }
+}
+

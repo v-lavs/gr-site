@@ -10,7 +10,6 @@
   .value-list {
     width: 70%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
 
@@ -70,39 +69,76 @@
 
 @include respond-to($sm) {
   .section-trust-value {
-    .content-section {
-      width: 75%;
-      margin: auto;
-      text-align: center;
-    }
+    padding-top: 20px;
+    padding-bottom: 12%;
 
-    .section__title,
     .value-list {
-      width: 100%;
-      max-width: none;
-      &__item{
-        padding: 0 15px;
+      width: 90%;
+
+      .card {
+        padding-left: 0;
+        padding-right: 0;
       }
-    }
 
-
-    .section__text {
-      max-width: none;
+      .bg-icon {
+        width: 45px;
+        height: 45px;
+      }
     }
   }
 }
 
-@media all and (max-width: 480px){
-  .section-trust-value{
+@include respond-to($sm) {
+  .section-trust-value {
+    .value-list {
+      .card__title {
+        display: none;
+      }
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-trust-value {
+    .value-list {
+      &__item:before {
+        height: 20px;
+      }
+
+      .bg-icon {
+        width: 35px;
+        height: 35px;
+      }
+
+      .card {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .section-trust-value {
     padding-top: 30px;
-    .content-section{
+
+    .content-section {
       width: 90%;
     }
-    .value-list__item{
-      width: 100%;
-      padding: 0;
-      &:before{
-        display: none;
+
+    .value-list {
+      &__item {
+        width: 100%;
+        padding: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      .bg-icon {
+        width: 25px;
+        height: 25px;
       }
     }
   }

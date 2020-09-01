@@ -741,12 +741,13 @@
     }
     .link_right {
       .inner {
-        padding-left: 5vh;
+        padding-left: 10vh;
       }
     }
     .link_left {
       .inner {
         padding-right: 3vh;
+        max-width: 55vw;
       }
     }
   }
