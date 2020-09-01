@@ -148,6 +148,8 @@
 
 @include respond-to($sm) {
   .section-rental-conditions {
+    padding-top: 35px;
+
     .wrap-icon-dowland {
       width: 34px;
       height: 24px;
@@ -161,6 +163,7 @@
 
 @include respond-to($xs) {
   .section-rental-conditions {
+
 
     .wrap-bg {
       min-height: 300px;
@@ -184,6 +187,10 @@
 
 @media all and (max-width: 480px) {
   .section-rental-conditions {
+    .wrap-bg {
+      min-height: 230px;
+    }
+
     .rental-conditions__item {
       padding-left: 50px;
       padding-bottom: 20px;
