@@ -97,11 +97,31 @@
 @include respond-to($lg) {
   .section-ordering {
     .form-ordering.form-ordering_horizontal {
+      .label-checkmark {
+        padding-right: 60px;
+      }
+
       .fieldboxs-part {
         width: 50%;
 
         &:last-of-type {
           width: 100%;
+          max-width: 100%;
+
+          .form-group:last-of-type {
+            justify-content: flex-start;
+          }
+        }
+      }
+
+      .bottom-row {
+        .form-group {
+          padding: 0 20px;
+          justify-content: flex-start;
+
+          &__title {
+            width: 100%;
+          }
         }
       }
     }
@@ -111,6 +131,17 @@
 
 @include respond-to($md) {
   .section-ordering {
+
+    .form-ordering.form-ordering_horizontal {
+      .fieldboxs {
+        flex-wrap: wrap;
+      }
+
+      .fieldboxs-part {
+        width: 100%;
+      }
+    }
+
     .form-ordering {
       .fieldboxs-part .input_small {
         max-width: 100%;
@@ -132,8 +163,17 @@
 
 @include respond-to($xs) {
   .section-ordering {
+    .form-ordering.form-ordering_horizontal {
+      .bottom-row {
+        .form-group {
+          padding: 0 10px;
+        }
+      }
+    }
+
     .form-ordering .fieldboxs-part {
       padding-left: 10px;
+      padding-right: 10px;
 
       .form-group-small {
         width: 48%;
@@ -149,8 +189,34 @@
   }
 }
 
+@include respond-to($xxs) {
+  .section-ordering {
+    .form-ordering.form-ordering_horizontal {
+      .form__footer {
+        .btn {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .form__footer .fieldboxs-part {
+      .btn {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
 @media all and (max-width: 520px) {
   .section-ordering {
+    .form-ordering.form-ordering_horizontal {
+      .label-checkmark {
+        padding-right: 30px;
+      }
+    }
+
     .form-ordering {
       .fieldboxs-part {
 
@@ -163,3 +229,12 @@
   }
 }
 
+@media all and (max-width: 380px) {
+  .section-ordering {
+    .form-ordering.form-ordering_horizontal {
+      .label-checkmark {
+        padding-right: 10px;
+      }
+    }
+  }
+}

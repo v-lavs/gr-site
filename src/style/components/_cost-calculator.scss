@@ -183,7 +183,7 @@
 
     &__footer {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
     }
     .nice-select {
       width: 100%;
@@ -194,7 +194,7 @@
     .total {
       order: -1;
       margin-bottom: 20px;
-      width: 40%;
+      width: 100%;
     }
 
     .calculator__section {
@@ -207,5 +207,12 @@
       font-size: 19px;
 
     }
+  }
+}
+
+@media all and (max-width: 320px) {
+  .cost-calculator {
+    width: 100%;
+    min-width: 100%!important;
   }
 }

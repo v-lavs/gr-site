@@ -435,10 +435,15 @@
   }
 }
 
-@media all and (max-width: 380px) {
+@media all and (max-width: 320px) {
   .section-catalog {
-    .card-vehicles .btn {
-      font-size: 14px;
+    .card-vehicles {
+      .btn {
+        font-size: 14px;
+      }
+      .block-link-transition .btn_go {
+        margin-right: 10px;
+      }
     }
   }
 }

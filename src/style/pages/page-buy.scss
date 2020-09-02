@@ -242,8 +242,24 @@
 
 @include respond-to($xxs) {
   .page-buy {
-    .single-car-card .right-part {
-      padding-right: 0;
+    .single-car-card {
+      .right-part {
+        padding-right: 0;
+      }
+
+      &__footer {
+        .btn {
+          display: block;
+          width: max-content;
+          margin: 0 auto;
+        }
+      }
+
+      &__details {
+        justify-content: space-between;
+        text-align: center;
+      }
+
     }
 
     .car-info {
@@ -281,9 +297,6 @@
 @media all and (max-width: 460px) {
   .page-buy {
     .single-car-card {
-      &__details {
-        justify-content: space-between;
-      }
 
       &__detail {
         padding-right: 15px;
@@ -297,11 +310,7 @@
         font-size: 12px;
       }
     }
-  }
-}
 
-@media all and (max-width: 460px) {
-  .page-buy {
     .car-info {
       &__icon {
         width: 90px;
