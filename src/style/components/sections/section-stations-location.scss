@@ -182,3 +182,15 @@
     }
   }
 }
+
+@media all and (max-width: 380px) {
+  .section-stations-location {
+
+    .section__title {
+      font-size: 29px;
+    }
+    .left-content .label {
+      font-size: 24px;
+    }
+  }
+}

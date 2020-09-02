@@ -1,3 +1,9 @@
 .page-long-term-rental {
   padding-bottom: 9%;
 }
+
+@include respond-to($md) {
+  .page-long-term-rental{
+    padding-top: 60px;
+  }
+}

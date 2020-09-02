@@ -177,3 +177,11 @@
     }
   }
 }
+
+@media all and (max-width: 320px) {
+  .section-taxi {
+    .section__title img {
+      margin-left: 13px;
+    }
+  }
+}

@@ -99,6 +99,7 @@
     .form-ordering.form-ordering_horizontal {
       .fieldboxs-part {
         width: 50%;
+
         &:last-of-type {
           width: 100%;
         }
@@ -106,6 +107,18 @@
     }
   }
 }
+
+
+@include respond-to($md) {
+  .section-ordering {
+    .form-ordering {
+      .fieldboxs-part .input_small {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
 
 @include respond-to($sm) {
   .section-ordering {
@@ -116,3 +129,37 @@
     }
   }
 }
+
+@include respond-to($xs) {
+  .section-ordering {
+    .form-ordering .fieldboxs-part {
+      padding-left: 10px;
+
+      .form-group-small {
+        width: 48%;
+
+      }
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-ordering {
+    padding-bottom: 120px;
+  }
+}
+
+@media all and (max-width: 520px) {
+  .section-ordering {
+    .form-ordering {
+      .fieldboxs-part {
+
+        .form-group-small {
+          width: 100%;
+
+        }
+      }
+    }
+  }
+}
+

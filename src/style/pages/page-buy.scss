@@ -241,16 +241,76 @@
 }
 
 @include respond-to($xxs) {
-  .page-buy .car-info {
-    &__table {
-      max-width: 380px;
-      margin: 0 auto;
+  .page-buy {
+    .single-car-card .right-part {
+      padding-right: 0;
     }
 
-    &__cell {
+    .car-info {
+      padding-top: 4rem;
+
+      &__label {
+        font-size: 16px;
+      }
+
+      &__icon {
+        display: block;
+        width: 100px;
+        height: 84px;
+      }
+
+      &__table {
+        max-width: 380px;
+        margin: 0 auto;
+      }
+
+      &__cell {
+        font-size: 18px;
+        width: 50%;
+        padding: 20px;
+      }
+
+      &__img-wrap {
+        padding-top: 140px;
+        padding-bottom: 140px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 460px) {
+  .page-buy {
+    .single-car-card {
+      &__details {
+        justify-content: space-between;
+      }
+
+      &__detail {
+        padding-right: 15px;
+      }
+
+      &__value {
+        font-size: 20px;
+      }
+
+      &__label {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 460px) {
+  .page-buy {
+    .car-info {
+      &__icon {
+        width: 90px;
+        height: 74px;
+      }
+    }
+
+    .single-car-card__value {
       font-size: 18px;
-      width: 50%;
-      padding: 20px;
     }
   }
 }
