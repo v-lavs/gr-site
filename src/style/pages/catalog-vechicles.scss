@@ -81,6 +81,7 @@
 
     .wrap-range {
       max-width: 200px;
+      width: 100%;
       text-align: center;
     }
 
@@ -294,7 +295,7 @@
   }
 }
 
-@media screen and (max-width: 1660px) {
+@include respond-to($screen-lg){
   .section-catalog {
     .card-vehicles {
       &__title {

@@ -1,72 +1,59 @@
 .section-ordering {
   padding-top: 7%;
   padding-bottom: 90px;
+}
 
-  .form-ordering {
-    &.form-ordering_vertical {
-      .label-checkmark {
-        width: 100%;
-      }
-
-      .form-group {
-        padding-bottom: 45px;
-      }
-    }
-
-    &.form-ordering_horizontal {
-      .fieldboxs {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        &-part {
-          width: 36%;
-
-          &:last-of-type {
-            width: 20%;
-            max-width: 495px;
-          }
-        }
-      }
-    }
-
-    .fieldboxs {
-      padding-top: 55px;
+.form-ordering {
+  &.form-ordering_vertical {
+    .label-checkmark {
+      width: 100%;
     }
 
     .form-group {
+      padding-bottom: 45px;
+    }
+  }
+
+  &.form-ordering_horizontal {
+    .fieldboxes {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
 
-      &:last-of-type {
-        padding-bottom: 0;
-      }
+      &-part {
+        width: 36%;
 
-      &_vertical {
-        flex-direction: column;
-      }
-    }
-
-    .fieldboxs-part {
-      padding: 0 20px;
-
-      .input_small {
-        width: 100%;
-        max-width: 257px;
-      }
-
-      .form-group-small {
-        width: 45%;
-
-      }
-
-      .form-group__title {
-        width: 100%;
+        &:last-of-type {
+          width: 20%;
+          max-width: 495px;
+        }
       }
     }
   }
 
+  .fieldboxes {
+    padding-top: 55px;
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+
+    &_vertical {
+      flex-direction: column;
+    }
+  }
+
+  .radios-wrap {
+    justify-content: flex-start;
+  }
+
+  .fieldboxes-part,
+  .bottom-row {
+    padding: 0 20px;
+  }
 
   .bottom-row {
     width: 100%;
@@ -92,64 +79,100 @@
   .form__footer {
     padding-top: 70px;
   }
+
+  .fieldboxes-part {
+    .input_small {
+      width: 100%;
+      max-width: 255px;
+    }
+
+    .form-group-small {
+      width: 45%;
+    }
+
+    .form-group__title {
+      width: 100%;
+    }
+  }
+}
+
+
+@include respond-to($screen-lg) {
+  .form-ordering.form-ordering_horizontal {
+    .fieldboxes-part {
+      &:last-of-type {
+        width: 27.5%;
+      }
+    }
+  }
+}
+
+@include respond-to($screen-md) {
+  .form-ordering {
+    .bottom-row .label-checkmark {
+      padding-right: 45px;
+    }
+  }
 }
 
 @include respond-to($lg) {
-  .section-ordering {
-    .form-ordering.form-ordering_horizontal {
-      .label-checkmark {
-        padding-right: 60px;
-      }
+  .form-ordering.form-ordering_horizontal {
+    .label-checkmark {
+      padding-right: 60px;
+    }
 
-      .fieldboxs-part {
-        width: 50%;
+    .form-group_radio-vertical {
+      flex-direction: row;
+    }
 
-        &:last-of-type {
-          width: 100%;
-          max-width: 100%;
+    .form-group_radio-vertical .label-checkmark,
+    .label-checkmark {
+      width: 50%;
+    }
 
-          .form-group:last-of-type {
-            justify-content: flex-start;
-          }
-        }
-      }
+    .fieldboxes-part {
+      width: 50%;
 
-      .bottom-row {
-        .form-group {
-          padding: 0 20px;
+      &:last-of-type {
+        width: 100%;
+        max-width: 100%;
+
+        .form-group:last-of-type {
           justify-content: flex-start;
-
-          &__title {
-            width: 100%;
-          }
         }
       }
+    }
+
+    .form-group__title {
+      width: 100%;
+    }
+  }
+
+  .section-ordering {
+    .lg-fullwidth {
+      max-width: none !important;
+      width: 100%;
     }
   }
 }
 
-
 @include respond-to($md) {
-  .section-ordering {
+  .form-ordering {
+    .fieldboxes-part .input_small {
+      max-width: 100%;
+    }
 
-    .form-ordering.form-ordering_horizontal {
-      .fieldboxs {
+    &.form-ordering_horizontal {
+      .fieldboxes {
         flex-wrap: wrap;
       }
 
-      .fieldboxs-part {
+      .fieldboxes-part {
         width: 100%;
-      }
-    }
-
-    .form-ordering {
-      .fieldboxs-part .input_small {
-        max-width: 100%;
       }
     }
   }
 }
-
 
 @include respond-to($sm) {
   .section-ordering {
@@ -162,16 +185,19 @@
 }
 
 @include respond-to($xs) {
-  .section-ordering {
-    .form-ordering.form-ordering_horizontal {
-      .bottom-row {
-        .form-group {
-          padding: 0 10px;
-        }
-      }
+  .form-ordering.form-ordering_horizontal {
+    .form-group_radio-vertical .label-checkmark,
+    .label-checkmark {
+      width: 100%;
     }
+    .bottom-row {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
 
-    .form-ordering .fieldboxs-part {
+  .form-ordering {
+    .fieldboxes-part {
       padding-left: 10px;
       padding-right: 10px;
 
@@ -190,17 +216,17 @@
 }
 
 @include respond-to($xxs) {
-  .section-ordering {
-    .form-ordering.form-ordering_horizontal {
-      .form__footer {
-        .btn {
-          display: block;
-          margin: 0 auto;
-        }
+  .form-ordering.form-ordering_horizontal {
+    .form__footer {
+      .btn {
+        display: block;
+        margin: 0 auto;
       }
     }
+  }
 
-    .form__footer .fieldboxs-part {
+  .section-ordering {
+    .form__footer .fieldboxes-part {
       .btn {
         display: block;
         margin: 0 auto;
@@ -218,7 +244,7 @@
     }
 
     .form-ordering {
-      .fieldboxs-part {
+      .fieldboxes-part {
 
         .form-group-small {
           width: 100%;

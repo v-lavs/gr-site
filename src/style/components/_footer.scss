@@ -109,7 +109,7 @@
   }
 }
 
-@media all and(max-width: 580px) {
+@include respond-to($xxs) {
   .footer {
     &_top {
       padding-top: 25px;

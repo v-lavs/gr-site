@@ -245,7 +245,7 @@
 }
 
 
-@media all and (max-width: 1600px) {
+@include respond-to($screen-lg) {
   .page-rental {
     .mark-step {
       right: -7%;
@@ -266,23 +266,27 @@
     }
   }
 
-  .page-rental {
-    .form-widget {
-      padding-right: 9.5%;
+  .form-widget {
+    padding-right: 9.5%;
 
-      .custom-select {
-        .current {
-          font-size: 16px;
+    .input {
+      font-size: 15px;
+    }
 
-          option {
-            font-size: 15px;
-          }
+    .custom-select {
+      .current {
+        font-size: 15px;
+
+        option {
+          font-size: 14px;
         }
       }
     }
+  }
 
+  .page-rental {
     .rental-step .part-left {
-      width: 460px;
+      width: 440px;
       padding-right: 25px;
     }
   }
@@ -319,8 +323,8 @@
       }
     }
   }
-  .section-lease-order {
 
+  .section-lease-order {
     .rental-step {
       .part-right__name {
         display: block;
@@ -332,6 +336,10 @@
 
 @include respond-to($sm) {
   .page-rental {
+    .section-ordering {
+      padding-right: 0;
+    }
+
     .rental-step {
       .block-preview__details {
         flex-wrap: wrap;
@@ -351,14 +359,21 @@
 }
 
 @include respond-to($xxs) {
-  .page-rental {
-    .form-widget {
-      .input,
-      .nice-select {
-        min-width: 197px;
-      }
-    }
+  .section-ordering {
+    padding-top: 45px;
+  }
+  .section-lease-order .rental-step .part-right {
+    margin-bottom: 30px;
+  }
 
+  .form-widget {
+    .input,
+    .nice-select {
+      min-width: 197px;
+    }
+  }
+
+  .page-rental {
     .rental-step {
       .part-left {
         width: 100%;
@@ -367,6 +382,23 @@
 
     .mark-step {
       right: -14%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .form-widget {
+    .form-group__item {
+      width: 100%;
+    }
+  }
+  .page-rental .rental-step {
+    .block-preview__value {
+      font-size: 24px;
+    }
+    .block-preview__detail {
+      width: 100%;
     }
   }
 }

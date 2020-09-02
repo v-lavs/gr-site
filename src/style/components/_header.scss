@@ -49,20 +49,23 @@
     padding: 5px;
     background: $white;
     border: 1px solid $light-gray;
-    box-shadow:2px 2px 33px 0 rgba(97,145,48, .18);
-    -webkit-box-shadow:2px 2px 33px 0 rgba(97,145,48, .18);
-    -moz-box-shadow:2px 2px 33px 0 rgba(97,145,48, .18);
+    box-shadow: 2px 2px 33px 0 rgba(97, 145, 48, .18);
+    -webkit-box-shadow: 2px 2px 33px 0 rgba(97, 145, 48, .18);
+    -moz-box-shadow: 2px 2px 33px 0 rgba(97, 145, 48, .18);
     z-index: 5;
+
     a {
       display: block;
       padding: 8px 8px 4px;
       transition: .35s;
-      border-bottom:1px solid $light-gray;
+      border-bottom: 1px solid $light-gray;
+
       &:hover,
-      &:focus{
+      &:focus {
         color: $primary-color;
       }
-      &:last-child{
+
+      &:last-child {
         padding-bottom: 0;
         border-bottom: 0;
       }
@@ -112,18 +115,21 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      &__item{
-       width: 70px;
+
+      &__item {
+        width: 70px;
         padding: 5px;
         opacity: .4;
       }
     }
-    .wrap-logo-car{
+
+    .wrap-logo-car {
       width: 100%;
       height: 30px;
       display: flex;
       align-items: center;
-      .img-logo-list{
+
+      .img-logo-list {
         margin: 0 auto;
         display: block;
       }
@@ -132,17 +138,19 @@
 
 }
 
-@include respond-to($sm){
+@include respond-to($sm) {
   .header {
     &_top {
       padding-top: 20px;
       padding-bottom: 20px;
-      .logo-site{
+
+      .logo-site {
         top: 50%;
         transform: translate(-50%, -50%);
       }
     }
-    &_bottom{
+
+    &_bottom {
       padding-bottom: 10px;
       padding-top: 10px;
     }
@@ -150,50 +158,56 @@
   }
 }
 
-@include respond-to($xs){
-  .header{
+@include respond-to($xs) {
+  .header {
     &_top {
       padding-top: 45px;
       padding-bottom: 10px;
       flex-wrap: wrap;
+
       .logo-site {
         max-width: 125px;
         top: 5px;
         transform: translate(-50%, 0);
       }
     }
-    .description{
+
+    .description {
       text-align: right;
       font-size: 10px;
-      .text{
+
+      .text {
         font-size: 11px;
       }
     }
-    &_bottom{
+
+    &_bottom {
       padding-bottom: 5px;
       padding-top: 5px;
     }
-    .logo-list{
+
+    .logo-list {
       justify-content: flex-start;
     }
   }
 }
 
-@media all and(max-width: 420px){
-  .header{
-    .dropdown{
+@media screen and(max-width: 420px) {
+  .header {
+    .dropdown {
       font-size: 17px;
     }
-    .drop-btn:before{
+
+    .drop-btn:before {
       top: 12px;
       right: 17px;
     }
   }
 }
 
-@media all and(max-width: 320px){
-  .header{
-    .description{
+@media screen and(max-width: 320px) {
+  .header {
+    .description {
       max-width: 70%;
     }
   }

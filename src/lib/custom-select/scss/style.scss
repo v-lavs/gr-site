@@ -142,7 +142,7 @@ label {
       border-color: $primary_light;
     }
   }
-  @media all and (max-width: 360px) {
+  @include media(380px) {
     width: 100%;
     &.light {
       margin: 18px 0 0;
@@ -154,13 +154,13 @@ label {
 .header {
   text-align: center;
   margin-bottom: 60px;
-  @media all and (min-width: 600px) {
-    padding: 0 18px;
+  @include respond-to($xxs) {
+    padding: 0 15px;
   }
   p {
     color: $gray;
     font-size: 18px;
-    margin-bottom: 36px;
+    margin-bottom: 35px;
   }
 }
 

@@ -277,11 +277,11 @@
   transform-origin: center;
   z-index: 1;
 
-  @media all and (orientation: landscape) {
+ @media screen and (orientation: landscape) {
     width: 200vw;
     height: 200vw;
   }
-  @media all and (orientation: portrait) {
+ @media screen and (orientation: portrait) {
     width: 200vh;
     height: 200vh;
   }
@@ -462,7 +462,7 @@
   }
 }
 
-@media all and (max-width: 1600px) {
+@include respond-to($screen-md) {
   .section-banner {
     .side1 {
       clip-path: polygon(26.5% 0, 50% 50%, 26.5% 100%, 0 100%, 0 0);
@@ -493,7 +493,7 @@
   }
 }
 
-@media all and (max-width: 1480px) {
+@include respond-to($screen-md){
   .section-banner {
     .side1 {
       clip-path: polygon(26.5% 0, 50% 50%, 26.5% 100%, 0 100%, 0 0);

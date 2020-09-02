@@ -7,7 +7,7 @@
 }
 
 
-@media all and (max-width: 1600px) {
+@include respond-to($screen-lg) {
   .container {
     max-width: 1240px;
   }

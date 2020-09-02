@@ -3,6 +3,9 @@
 
   &-group {
     display: flex;
+    &_radio-vertical {
+      flex-direction: column;
+    }
   }
 
   .input {
@@ -115,7 +118,6 @@
       z-index: 2;
     }
   }
-
 }
 
 @include respond-to($sm) {
@@ -160,11 +162,10 @@
       font-size: 12px;
     }
 
-    .fieldboxs-part {
+    .fieldboxes-part {
 
       .form-group-small {
         width: 100%;
-
       }
     }
   }

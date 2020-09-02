@@ -1,10 +1,14 @@
 @mixin respond-to($media) {
-    @media all and #{$media} {
+    @media screen and #{$media} {
         @content;
     }
 }
 
-
+@mixin media($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
 
 
 
