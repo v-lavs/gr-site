@@ -475,36 +475,36 @@
 
 @include respond-to($screen-md) {
 
-.section-banner {
-  .side1 {
-    clip-path: polygon(26.5% 0, 50% 50%, 26.5% 100%, 0 100%, 0 0);
+  .section-banner {
+    .side1 {
+      clip-path: polygon(26.5% 0, 50% 50%, 26.5% 100%, 0 100%, 0 0);
+    }
+
+    .side2 {
+      clip-path: polygon(50% 50%, 26% 0, 74% 0);
+    }
+
+    .side3 {
+      clip-path: polygon(73% 0, 50% 50%, 73% 100%, 100% 100%, 100% 0);
+    }
+
+    .side4 {
+      clip-path: polygon(50% 50%, 26% 100%, 74% 100%);
+    }
+
+    .link_left .inner,
+    .link_right .inner {
+      max-width: 37vw;
+    }
   }
 
-  .side2 {
-    clip-path: polygon(50% 50%, 26% 0, 74% 0);
+  .container-default {
+    min-width: 90px;
   }
 
-  .side3 {
-    clip-path: polygon(73% 0, 50% 50%, 73% 100%, 100% 100%, 100% 0);
+  .banner-category .banner-category__title {
+    font-size: 45px;
   }
-
-  .side4 {
-    clip-path: polygon(50% 50%, 26% 100%, 74% 100%);
-  }
-
-  .link_left .inner,
-  .link_right .inner {
-    max-width: 37vw;
-  }
-}
-
-.container-default {
-  min-width: 90px;
-}
-
-.banner-category .banner-category__title {
-  font-size: 45px;
-}
 
 }
 
@@ -573,6 +573,10 @@
           max-height: none;
           padding-bottom: 15vw;
         }
+        .link_bottom .inner {
+          max-height: none;
+          padding-top: 21vw;
+        }
       }
     }
 
@@ -620,6 +624,18 @@
 
     .side4 {
       clip-path: polygon(50% 50%, 26% 100%, 74% 100%);
+    }
+  }
+}
+
+@media all and (max-width: 1050px) and (orientation: landscape) {
+  .section-banner {
+    .container-default {
+      height: 54vw;
+    }
+
+    .link_bottom .inner {
+      padding-top: 24vh;
     }
   }
 }
