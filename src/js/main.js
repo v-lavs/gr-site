@@ -13,96 +13,31 @@
 
 $(document).ready(function () {
     function setReviewSlideHeight(resizedWindowWidth) {
-        if (resizedWindowWidth > 580) {
-            setSlideHeight();
-        } else {
-            $('.slider-reviews').css({height: ''})
-        }
+        // if (resizedWindowWidth > 580) {
+        //     setSlideHeight();
+        // } else {
+        //     $('.slider-reviews').css({height: ''})
+        // }
     }
-
-    /**
-     * SLIDER-BRANDS
-     **/
-    var brandsSettings = {
-        navigation: {
-            nextEl: '#popularBrandsPagination .swiper-button-next',
-            prevEl: '#popularBrandsPagination .swiper-button-prev',
-        },
-        pagination: {
-            el: '#popularBrandsPagination .swiper-pagination',
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            768: {
-                slidesPerView: 1,
-                spaceBetween: 10
-            },
-            1050: {
-                slidesPerView: 2,
-                spaceBetween: 10
-            },
-            1381: {
-                slidesPerView: 3,
-                watchOverflow: true,
-            }
-        }
-    };
-    var swiperBrands = new Swiper('.slider-brands', brandsSettings);
-
 
     /**
      * SLIDER-REVIEWS
      **/
 
     function setSlideHeight() {
-        var $slides = $('.slider-reviews .swiper-slide');
-        var heightArr = $slides.map(function (index) {
-            return $(this).find('.card-review').height();
-        });
-        var maxSlideHeight = Math.round(Math.max.apply(Math, heightArr));
-        $('.slider-reviews').css({height: maxSlideHeight});
+        // var $slides = $('.slider-reviews .swiper-slide');
+        // var heightArr = $slides.map(function (index) {
+        //     return $(this).find('.card-review').height();
+        // });
+        // var maxSlideHeight = Math.round(Math.max.apply(Math, heightArr));
+        // $('.slider-reviews').css({height: maxSlideHeight});
     }
 
     setSlideHeight();
 
-    var reviewSettings = {
-        // direction: 'vertical',
-        navigation: {
-            nextEl: '#reviewsPagination  .swiper-button-next',
-            prevEl: '#reviewsPagination  .swiper-button-prev',
-        },
-        pagination: {
-            el: '#reviewsPagination .swiper-pagination',
-            clickable: true,
-        },
-        slidesPerView: 1,
-        observeParents: true,
-        breakpoints: {
-            0: {
-                direction: 'horizontal',
-                slidesPerView: 1,
-                spaceBetween: 30,
-                autoHeight: true,
-            },
-            581: {
-                direction: 'vertical',
-                slidesPerView: 1,
-                spaceBetween: 100,
-            },
-            1920: {
-                direction: 'vertical',
-                spaceBetween: 100,
-            }
-        }
-    };
-    var swiperReviews = new Swiper('.slider-reviews', reviewSettings);
 
-    /**
-     * SLIDER-LOGO
-     **/
+    // SLIDER-LOGO
+
     var logoSettings = {
         slidesPerView: 5,
         freeMode: true,
@@ -137,16 +72,13 @@ $(document).ready(function () {
     });
 
 
-    /**
-     * CUSTOM SELECT
-     **/
+    // CUSTOM SELECT
 
     $('.custom-select').niceSelect();
 
 
-    /**
-     * CARD HEIGHT
-     **/
+    // CARD HEIGHT
+
     function setEqualHeight(selector, breakpoint) {
         var max_block_height = 0;
         var $blockContent = $(selector);
@@ -162,7 +94,7 @@ $(document).ready(function () {
 
     function combyHeight() {
         setEqualHeight('.block-advantages .advantages-card', 767);
-        // setEqualHeight('.condition-list .condition-list__item', 767);
+
     }
 
     combyHeight();
@@ -176,13 +108,14 @@ $(document).ready(function () {
         var resizedWindowWidth = $(window).width();
 
         if (windowW !== resizedWindowWidth) {
-            if (swiperReviews && swiperReviews.initialized) {
-                swiperReviews.destroy(true, true);
-            }
+            // if (swiperReviews && swiperReviews.initialized) {
+            //     swiperReviews.destroy(true, true);
+            // }
 
             if ($(window).width() < 768 && !logoSliderMob) {
                 logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
-            } else {
+            }
+            else {
                 if (logoSliderMob && logoSliderMob.initialized) {
                     logoSliderMob.destroy();
                 }
@@ -190,14 +123,15 @@ $(document).ready(function () {
 
             windowW = resizedWindowWidth;
 
-            setReviewSlideHeight(resizedWindowWidth);
-
-            swiperReviews = new Swiper('.slider-reviews', reviewSettings);
-
-            setEqualHeight();
+            // setReviewSlideHeight(resizedWindowWidth);
+            //
+            // swiperReviews = new Swiper('.slider-reviews', reviewSettings);
+            //
+            // setEqualHeight();
         }
     });
 
+    // RANGE-SLIDER
     var sliders = $(".js-range-slider").each(function (i, $item) {
         var $input = $($item);
         $input.ionRangeSlider({
@@ -217,6 +151,5 @@ $(document).ready(function () {
             $inp.parents('.wrap-range').find('.to-value').html(to);
         });
     });
-
 
 });

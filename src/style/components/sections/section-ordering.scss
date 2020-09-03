@@ -12,6 +12,11 @@
     .form-group {
       padding-bottom: 45px;
     }
+
+    .fieldboxes-part,
+    .bottom-row {
+      padding: 0;
+    }
   }
 
   &.form-ordering_horizontal {
@@ -190,6 +195,7 @@
     .label-checkmark {
       width: 100%;
     }
+
     .bottom-row {
       padding-left: 10px;
       padding-right: 10px;
@@ -207,9 +213,6 @@
       }
     }
   }
-}
-
-@include respond-to($xs) {
   .section-ordering {
     padding-bottom: 120px;
   }

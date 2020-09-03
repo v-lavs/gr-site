@@ -335,3 +335,12 @@
     }
   }
 }
+
+@media screen and (max-width: 380px) {
+  .section-product-car {
+    .right-part {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

@@ -393,12 +393,35 @@
       width: 100%;
     }
   }
-  .page-rental .rental-step {
-    .block-preview__value {
-      font-size: 24px;
+  .page-rental {
+    .rental-step {
+      .block-preview__value {
+        font-size: 24px;
+      }
+
+      .block-preview__detail {
+        width: 100%;
+      }
     }
-    .block-preview__detail {
-      width: 100%;
+
+    .mark-step {
+      right: -18%;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .page-rental {
+    .mark-step {
+      right: -25%;
+    }
+    .rental-step {
+      padding-top: 45px;
+    }
+    .form-widget{
+      .form__header {
+        margin-bottom: 50px;
+      }
     }
   }
 }
