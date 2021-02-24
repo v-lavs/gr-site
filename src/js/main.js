@@ -13,11 +13,7 @@
 
 $(document).ready(function () {
     function setReviewSlideHeight(resizedWindowWidth) {
-        // if (resizedWindowWidth > 580) {
-        //     setSlideHeight();
-        // } else {
-        //     $('.slider-reviews').css({height: ''})
-        // }
+
     }
 
     /**
@@ -25,12 +21,7 @@ $(document).ready(function () {
      **/
 
     function setSlideHeight() {
-        // var $slides = $('.slider-reviews .swiper-slide');
-        // var heightArr = $slides.map(function (index) {
-        //     return $(this).find('.card-review').height();
-        // });
-        // var maxSlideHeight = Math.round(Math.max.apply(Math, heightArr));
-        // $('.slider-reviews').css({height: maxSlideHeight});
+
     }
 
     setSlideHeight();
@@ -108,9 +99,7 @@ $(document).ready(function () {
         var resizedWindowWidth = $(window).width();
 
         if (windowW !== resizedWindowWidth) {
-            // if (swiperReviews && swiperReviews.initialized) {
-            //     swiperReviews.destroy(true, true);
-            // }
+
 
             if ($(window).width() < 768 && !logoSliderMob) {
                 logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
@@ -123,15 +112,11 @@ $(document).ready(function () {
 
             windowW = resizedWindowWidth;
 
-            // setReviewSlideHeight(resizedWindowWidth);
-            //
-            // swiperReviews = new Swiper('.slider-reviews', reviewSettings);
-            //
-            // setEqualHeight();
         }
     });
 
-    // RANGE-SLIDER
+    var eventTimer;
+
     var sliders = $(".js-range-slider").each(function (i, $item) {
         var $input = $($item);
         $input.ionRangeSlider({
@@ -149,7 +134,12 @@ $(document).ready(function () {
             var to = $inp.data("to");
             $inp.parents('.wrap-range').find('.from-value').html(from);
             $inp.parents('.wrap-range').find('.to-value').html(to);
+
+            const val = this.value;
+            clearTimeout(eventTimer);
+            eventTimer = setTimeout(function() {
+                console.log({from, to}, 'event finished')
+            }, 250);
         });
     });
-
 });
