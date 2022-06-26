@@ -1,0 +1,254 @@
+.tech-data-car {
+  .section-catalog {
+    padding-bottom: 0;
+
+    .wrap-slider {
+      width: 42.25%;
+    }
+
+    .swiper-container {
+      overflow: hidden;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      top: 50%;
+      width: 54px;
+      height: 54px;
+      opacity: 1;
+      transform: translateY(-50%);
+    }
+
+    .swiper-button-prev {
+      left: 30px;
+    }
+
+    .swiper-button-next {
+      right: 30px;
+    }
+
+    .swiper-button-prev {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .swiper-button-next:before,
+    .swiper-button-prev:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 54px;
+      height: 54px;
+      background-image: url(../assets/img/arrow2.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .vehicles-list {
+    padding-bottom: 5px;
+  }
+
+  .card-vehicles {
+    padding-top: 0;
+    padding-bottom: 60px;
+
+    &__body {
+      width: 57.75%;
+      padding-right: 0;
+    }
+  }
+}
+
+.car-data-slider {
+  position: relative;
+
+  &__wrap-img {
+    position: relative;
+    padding-top: 63%;
+
+    img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    padding: 0;
+    bottom: 40px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1.5px solid #ffffff;
+    background-color: transparent;
+    opacity: 1;
+
+    margin: 0 7px;
+
+    &-active {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.tech-data-car,
+.inform-rental {
+  .card-vehicles {
+    .specifications-list__item {
+      padding: 8px 0;
+    }
+
+    &__body {
+      padding-left: 7.25%;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    .brief-description {
+      padding-top: 0;
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
+      align-items: center;
+    }
+
+    .number-seats {
+      font-size: 18px;
+
+      img {
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .specifications-list {
+        .part-left {
+          font-weight: 500;
+          font-size: 16px;
+        }
+
+        .part-right {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .conditional-display__item {
+      vertical-align: middle;
+      margin-left: 4px;
+    }
+
+    .conditional-display .round {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .car-brand {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #979797;
+    margin-right: 20px;
+  }
+
+  .block-transition {
+    display: flex;
+    margin-bottom: 52px;
+  }
+
+  .conditional-display {
+    margin-right: 23px;
+  }
+
+  .specifications-list {
+    width: 100%;
+    max-width: 375px;
+
+    &__item {
+      .part-left {
+        width: 56%;
+        font-size: 16px;
+      }
+
+      .part-right {
+        width: auto;
+        font-size: 18px;
+        text-align: right;
+      }
+    }
+  }
+}
+
+
+@include respond-to($screen-md) {
+  .tech-data-car {
+    .card-vehicles .brief-description {
+      padding-top: 0;
+
+    }
+
+    .section-catalog .wrap-slider {
+      width: 50%;
+    }
+  }
+}
+
+@include respond-to($md) {
+  .tech-data-car {
+    .vehicles-list__item {
+      width: 48%;
+      padding: 0 20px 30px;
+    }
+    .vehicles-list .brief-description{
+      max-width: max-content;
+      padding-top: 0;
+    }
+    .section-catalog .wrap-slider {
+      width: 100%;
+    }
+    .block-transition{
+      margin-bottom: 30px;
+    }
+  }
+  .car-data-slider {
+    margin-bottom: 20px;
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+    }
+
+    .swiper-pagination {
+      bottom: 15px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+}
+
+@include respond-to($xs){
+  .tech-data-car{
+    .page__header{
+      margin-bottom: 30px;
+    }
+    .vehicles-list__item {
+      padding: 0 0 30px;
+    }
+  }
+}

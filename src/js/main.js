@@ -5,6 +5,8 @@
 //= include ../lib/jquery-3.3.1.min.js
 //= include ../lib/custom-select/js/jquery.nice-select.js
 //= include ../lib/range-slider/ion.rangeSlider.min.js
+//= include ../lib/jquery-ui.js
+//= include ../lib/datepicker-de.js
 
 
 /**
@@ -141,5 +143,108 @@ $(document).ready(function () {
                 console.log({from, to}, 'event finished')
             }, 250);
         });
+    });
+
+
+    var carDataSlider = new Swiper(".car-data-slider", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+    //DATEPICKER
+    const date = new Date();
+    date.setDate(date.getDate());
+
+    $("#datepicker").datepicker({
+        minDate: date,
+        onSelect: function (date) {
+            $('#datepicker_value').val(date)
+        },
+
+    });
+
+    $( function() {
+        $( "#datepicker" ).datepicker();
+        var dateFormat = "mm/dd/yy",
+            from = $( "#from" )
+                .datepicker({
+                    // defaultDate: "+1w",
+                    numberOfMonths: 1
+                })
+                .on( "change", function() {
+                    to.datepicker( "option", "minDate", getDate( this ) );
+                }),
+            to = $( "#to" ).datepicker({
+                // defaultDate: "+1w",
+                numberOfMonths: 1
+            })
+                .on( "change", function() {
+                    from.datepicker( "option", "maxDate", getDate( this ) );
+                });
+
+        function getDate( element ) {
+            var date;
+            try {
+                date = $.datepicker.parseDate( dateFormat, element.value );
+            } catch( error ) {
+                date = null;
+            }
+
+            return date;
+        }
+    } );
+    $( function() {
+        $( "#datepicker" ).datepicker();
+        var dateFormat = "mm/dd/yy",
+            from = $( "#angebotFrom" )
+                .datepicker({
+                    // defaultDate: "+1w",
+                    numberOfMonths: 1
+                })
+                .on( "change", function() {
+                    to.datepicker( "option", "minDate", getDate( this ) );
+                }),
+            to = $( "#angebotTo" ).datepicker({
+                // defaultDate: "+1w",
+                numberOfMonths: 1
+            })
+                .on( "change", function() {
+                    from.datepicker( "option", "maxDate", getDate( this ) );
+                });
+
+        function getDate( element ) {
+            var date;
+            try {
+                date = $.datepicker.parseDate( dateFormat, element.value );
+            } catch( error ) {
+                date = null;
+            }
+
+            return date;
+        }
+    } );
+
+    $('.modal-toggle').on('click', function (e) {
+        e.preventDefault();
+
+        const modalID = $(this).data('modal');
+        const modal = $('#' + modalID);
+        modal.fadeIn();
+        jQuery('.backdrop').fadeIn();
+        $("body").addClass("modal-open");
+    });
+
+    $('.modal__close, .backdrop').on('click', function (e) {
+        e.preventDefault();
+        $('.modal').fadeOut();
+        jQuery('.backdrop').fadeOut();
+        $("body").removeClass("modal-open");
     });
 });

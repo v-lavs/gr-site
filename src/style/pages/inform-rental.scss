@@ -1,0 +1,208 @@
+.inform-rental {
+  .card-vehicles {
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 17px;
+
+    .modification {
+      font-size: 19px;
+      opacity: .6;
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      font-weight: 600;
+    }
+
+    &__wrap-img {
+      position: relative;
+      width: 50%;
+      padding-top: 26.75%;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__body {
+      width: 50%;
+    }
+
+    .specifications-list {
+      &__item {
+        display: flex;
+
+        .part-left,
+        .part-right {
+          width: 50%;
+        }
+      }
+
+      .part-right {
+        font-weight: 600;
+      }
+    }
+
+    .block-link-transition {
+
+      .car-brand {
+        display: inline-block;
+      }
+    }
+
+    .conditional-display {
+      &__item {
+        display: inline-block;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      .battery {
+        display: block;
+        width: 7px;
+        height: 19px;
+      }
+
+      .round {
+        display: block;
+        border: 1px solid #d0d0d0;
+        background-color: #ffffff;
+        border-radius: 50%;
+
+        &_filled {
+          background-color: #d0d0d0;
+        }
+      }
+    }
+
+    .number-seats {
+      font-weight: 600;
+      line-height: 1.46;
+      color: #20b12e;
+    }
+  }
+
+  .section-agreement {
+    padding-bottom: 94px;
+  }
+
+  .fieldboxes {
+    align-items: flex-end;
+    padding-bottom: 20px;
+    margin: 0 -17px;
+  }
+
+  .form-group-small {
+    width: 20%;
+    padding: 0 17px;
+
+    &:last-child {
+      max-width: 270px;
+
+    }
+  }
+
+  .btn_go {
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  .section__text {
+    width: 90%;
+    font-size: 18px;
+    line-height: 1.44;
+    margin: 0 auto;
+
+    p {
+      margin-bottom: 18px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .inform-rental {
+
+    .card-vehicles {
+      align-items: flex-start;
+    }
+
+    .card-vehicles__wrap-img {
+      width: 56%;
+      padding-top: 35.75%;
+    }
+
+    .card-vehicles__body {
+      padding-left: 4%;
+    }
+
+    .block-transition {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .inform-rental {
+    .card-vehicles {
+      display: block;
+
+      &__body {
+        width: 100%;
+        padding-left: 0;
+      }
+
+      &__wrap-img {
+        width: 100%;
+        padding-top: 63.75%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .inform-rental {
+    .card-vehicles {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .inform-rental {
+    .card-vehicles__title {
+      font-size: 24px;
+    }
+
+    .specifications-list__item .part-left {
+      font-size: 14px;
+    }
+
+    .specifications-list__item .part-right {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .tech-data-car,
+  .inform-rental {
+    .container {
+      padding: 0;
+    }
+  }
+}
