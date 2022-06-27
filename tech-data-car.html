@@ -16,7 +16,6 @@
     <!--Style-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="build/main.css">
-    <script src="../cma/src/js/main.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -512,12 +511,9 @@
                 </div>
                 <div class="part part_right">
                     <div class="form-group__title">Select Date</div>
-                    <div class="fieldboxes">
-                        <input type="hidden" name="from">
-                        <div id="from"></div>
 
-                        <input type="hidden" name="to">
-                        <div id="to"></div>
+                    <div id="inline-datepicker" class="datepicker-inline">
+                        <input hidden type="text" name="daterange" value="">
                     </div>
                 </div>
             </div>
@@ -528,56 +524,6 @@
     </div>
 
 </div>
-<div class="modal" id="modalAngebot">
-    <div class="modal__dialog">
-        <button type="button" class="modal__close" aria-label="close popup">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                 viewBox="0 0 20 20">
-                <path fill="#45c366"
-                      d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
-            </svg>
-        </button>
-        <form action="#" method="post" class="modal__form form">
-            <div class="form__header">
-                <h3 class="form__heading">Daten für Angebot</h3>
-                <p class="form__text">Premium Carsharing mit Tesla Model S und Tesla Model X in Wien.</p>
-            </div>
-            <div class="form__body">
-                <div class="part part_left">
-                    <div class="form-group-small">
-                        <label class="form-group__title">Fahrername und Vorname*</label>
-                        <input type="text" class="input" placeholder="Koltyn"
-                               required>
-                    </div>
-                    <div class="form-group-small">
-                        <label class="form-group__title">Email</label>
-                        <input type="text" class="input" placeholder="example@gmail.com"
-                               required>
 
-                    </div>
-                    <div class="form-group-small">
-                        <label class="form-group__title">Telephone*</label>
-                        <input type="text" class="input" placeholder="+123456789" required>
-
-                    </div>
-                </div>
-                <div class="part part_right">
-                    <div class="form-group__title">Select Date</div>
-                    <div class="fieldboxes">
-                        <input type="hidden" name="from">
-                        <div id="angebotFrom"></div>
-
-                        <input type="hidden" name="to">
-                        <div id="angebotTo"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="form__footer">
-                <button class="btn btn_go">Weiter</button>
-            </div>
-        </form>
-    </div>
-
-</div>
 </body>
 </html>

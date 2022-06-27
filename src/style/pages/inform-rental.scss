@@ -131,6 +131,16 @@
       }
     }
   }
+
+  .input {
+    padding: 18px 23px;
+  }
+}
+
+@media screen and (max-width: 1880px) {
+  .inform-rental .form-group-small {
+    padding: 0 8px;
+  }
 }
 
 @media screen and (max-width: 1050px) {

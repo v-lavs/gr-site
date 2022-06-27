@@ -5,8 +5,9 @@
 //= include ../lib/jquery-3.3.1.min.js
 //= include ../lib/custom-select/js/jquery.nice-select.js
 //= include ../lib/range-slider/ion.rangeSlider.min.js
-//= include ../lib/jquery-ui.js
-//= include ../lib/datepicker-de.js
+
+//= include ../lib/moment.min.js
+//= include ../lib/rangepicker.js
 
 
 /**
@@ -105,8 +106,7 @@ $(document).ready(function () {
 
             if ($(window).width() < 768 && !logoSliderMob) {
                 logoSliderMob = new Swiper('.logo-slider-mob', logoSettings);
-            }
-            else {
+            } else {
                 if (logoSliderMob && logoSliderMob.initialized) {
                     logoSliderMob.destroy();
                 }
@@ -139,7 +139,7 @@ $(document).ready(function () {
 
             const val = this.value;
             clearTimeout(eventTimer);
-            eventTimer = setTimeout(function() {
+            eventTimer = setTimeout(function () {
                 console.log({from, to}, 'event finished')
             }, 250);
         });
@@ -158,78 +158,7 @@ $(document).ready(function () {
         },
     });
 
-    //DATEPICKER
-    const date = new Date();
-    date.setDate(date.getDate());
-
-    $("#datepicker").datepicker({
-        minDate: date,
-        onSelect: function (date) {
-            $('#datepicker_value').val(date)
-        },
-
-    });
-
-    $( function() {
-        $( "#datepicker" ).datepicker();
-        var dateFormat = "mm/dd/yy",
-            from = $( "#from" )
-                .datepicker({
-                    // defaultDate: "+1w",
-                    numberOfMonths: 1
-                })
-                .on( "change", function() {
-                    to.datepicker( "option", "minDate", getDate( this ) );
-                }),
-            to = $( "#to" ).datepicker({
-                // defaultDate: "+1w",
-                numberOfMonths: 1
-            })
-                .on( "change", function() {
-                    from.datepicker( "option", "maxDate", getDate( this ) );
-                });
-
-        function getDate( element ) {
-            var date;
-            try {
-                date = $.datepicker.parseDate( dateFormat, element.value );
-            } catch( error ) {
-                date = null;
-            }
-
-            return date;
-        }
-    } );
-    $( function() {
-        $( "#datepicker" ).datepicker();
-        var dateFormat = "mm/dd/yy",
-            from = $( "#angebotFrom" )
-                .datepicker({
-                    // defaultDate: "+1w",
-                    numberOfMonths: 1
-                })
-                .on( "change", function() {
-                    to.datepicker( "option", "minDate", getDate( this ) );
-                }),
-            to = $( "#angebotTo" ).datepicker({
-                // defaultDate: "+1w",
-                numberOfMonths: 1
-            })
-                .on( "change", function() {
-                    from.datepicker( "option", "maxDate", getDate( this ) );
-                });
-
-        function getDate( element ) {
-            var date;
-            try {
-                date = $.datepicker.parseDate( dateFormat, element.value );
-            } catch( error ) {
-                date = null;
-            }
-
-            return date;
-        }
-    } );
+    //MODAL
 
     $('.modal-toggle').on('click', function (e) {
         e.preventDefault();
@@ -247,4 +176,27 @@ $(document).ready(function () {
         jQuery('.backdrop').fadeOut();
         $("body").removeClass("modal-open");
     });
+
+    //------------------------------------------DATEPICKER----------------------------------------------------------------
+    // DATEPICKER 1
+
+    $('.datepicker-click').daterangepicker({
+        opens: 'left',
+        autoApply: true,
+    }, function (start, end, label) {
+    });
+
+
+    //DATEPICER ANGEBOT
+    $('.datepicker-inline-input').daterangepicker({
+        opens: 'left',
+        parentEl: '#inline-datepicker',
+        autoApply: true,
+        inline: true,
+
+    }, function (start, end, label) {});
+
+    //DATEPICER MIETVERTRAG
+
+
 });
