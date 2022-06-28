@@ -105,11 +105,10 @@
   .form-group-small {
     width: 20%;
     padding: 0 17px;
+  }
 
-    &:last-child {
-      max-width: 270px;
-
-    }
+  .form-group-middle {
+    width: 22%;
   }
 
   .btn_go {
@@ -132,18 +131,80 @@
     }
   }
 
+  .wrap-input-click {
+    position: relative;
+    margin-bottom: 32px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      background-image: url(../assets/img/select-date.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      display: block;
+      width: 20px;
+      height: 20px;
+      top: 16px;
+      left: 20px;
+
+    }
+  }
+
+  .input.datepicker-click {
+    padding-left: 52px;
+    margin-bottom: 0;
+  }
+
   .input {
     padding: 18px 23px;
   }
 }
 
+
 @media screen and (max-width: 1880px) {
   .inform-rental .form-group-small {
+    width: 20%;
+    padding: 0 8px;
+  }
+  .inform-rental .form-group-middle {
+    width: 25%;
+    padding: 0 8px;
+  }
+  .inform-rental .wrap-btn {
+    margin-top: 30px;
     padding: 0 8px;
   }
 }
 
-@media screen and (max-width: 1050px) {
+@include respond-to($screen-lg) {
+  .inform-rental {
+    .form-group-small {
+      width: 22%;
+    }
+
+    .form-group-middle {
+      width: 30%;
+    }
+  }
+}
+
+@include respond-to($screen-md) {
+  .inform-rental .form-group-small {
+    width: 20%;
+  }
+}
+
+@include respond-to($lg) {
+  .inform-rental {
+    .form-group-middle,
+    .form-group-small {
+      width: 50%;
+    }
+  }
+}
+
+@include respond-to($md) {
   .inform-rental {
 
     .card-vehicles {
@@ -167,6 +228,7 @@
 
 @include respond-to($sm) {
   .inform-rental {
+
     .card-vehicles {
       display: block;
 
@@ -186,13 +248,23 @@
 
 @include respond-to($xs) {
   .inform-rental {
+    .form-group-middle,
+    .form-group-small {
+      width: 100%;
+    }
+
     .card-vehicles {
       margin-bottom: 40px;
+    }
+
+    .daterangepicker .drp-calendar {
+      margin: 0;
     }
   }
 }
 
 @include respond-to($xxs) {
+
   .inform-rental {
     .card-vehicles__title {
       font-size: 24px;
@@ -208,6 +280,21 @@
   }
 }
 
+@media (min-width: 564px) {
+  .inform-rental {
+    >  .daterangepicker .drp-calendar {
+      float:none!important;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .inform-rental {
+    >  .daterangepicker .drp-calendar {
+      float:left!important;
+    }
+  }
+}
 @media screen and (max-width: 340px) {
   .tech-data-car,
   .inform-rental {
