@@ -160,6 +160,9 @@
     padding: 18px 23px;
   }
 }
+@media (min-width: 564px) {
+
+}
 
 
 @media screen and (max-width: 1880px) {
@@ -256,10 +259,6 @@
     .card-vehicles {
       margin-bottom: 40px;
     }
-
-    .daterangepicker .drp-calendar {
-      margin: 0;
-    }
   }
 }
 
@@ -280,21 +279,7 @@
   }
 }
 
-@media (min-width: 564px) {
-  .inform-rental {
-    >  .daterangepicker .drp-calendar {
-      float:none!important;
-    }
-  }
-}
 
-@media (min-width: 640px) {
-  .inform-rental {
-    >  .daterangepicker .drp-calendar {
-      float:left!important;
-    }
-  }
-}
 @media screen and (max-width: 340px) {
   .tech-data-car,
   .inform-rental {
