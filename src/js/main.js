@@ -183,6 +183,10 @@ $(document).ready(function () {
     $('.datepicker-click').daterangepicker({
         opens: 'left',
         autoApply: true,
+        parentEl: '#parent-picker',
+        locale: {
+            format: 'DD MMMM YYYY'
+        }
     }, function (start, end, label) {
     });
 

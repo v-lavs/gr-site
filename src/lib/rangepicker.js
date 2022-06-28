@@ -825,7 +825,7 @@
                         classes.push('active', 'end-date');
 
                     //highlight dates in-between the selected dates
-                    if (this.endDate != null && calendar[row][col] > this.startDate && calendar[row][col] < this.endDate)
+                    if (this.endDate != null && calendar[row][col] >= this.startDate && calendar[row][col] < this.endDate)
                         classes.push('in-range');
 
                     //apply custom classes for this date

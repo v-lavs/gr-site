@@ -24,17 +24,63 @@
 .daterangepicker td.end-date,
 .daterangepicker td.active:hover {
   background-color: transparent;
+
   .calendar-day {
-    background-color:#6BB75C ;
+    background-color: #6BB75C;
     color: #fff;
     width: 29px;
     height: 29px;
   }
 }
 
+.daterangepicker td.off.active .calendar-day,
+.daterangepicker td.off.active:hover .calendar-day {
+  background-color: transparent;
+  color: #999;
+}
+
+.daterangepicker {
+  border: none;
+  padding: 30px;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  .calendar-table .prev span,
+  .calendar-table .next span {
+    opacity: .4;
+  }
+
+  tr.calendar-header {
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    height: 53px;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: #E1E6ED;
+      bottom: 0;
+      left: -10px;
+      right: -10px;
+    }
+  }
+}
+
 .daterangepicker .drp-calendar {
   max-width: none;
-  width: 50%;
+  width: 48%;
+  font-family: $primary-font;
+  border: .5px solid #E1E6ED;
+  border-radius: 4px;
+  overflow: hidden;
+  padding-top: 0 !important;
+
+  &.left {
+    margin-right: 22px;
+  }
 }
 
 
@@ -53,8 +99,40 @@
   }
 
   &.in-range {
-    background: #EBFEE8;
+    background-color: transparent;
   }
+
+  &.in-range:not(.off) {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      height: 70%;
+      left: 0;
+      width: 100%;
+      background: #EBFEE8;
+    }
+  }
+  &.end-date.in-range:before {
+    width: 50% !important;
+  }
+  &.start-date.end-date:before {
+    display: none;
+  }
+  &.start-date.in-range:before {
+    width: 50% !important;
+    left: auto!important;
+    right: 0;
+  }
+}
+
+.daterangepicker td.available:hover,
+.daterangepicker th.available:hover {
+  background-color: transparent;
+  color: #6BB75C;
 }
 
 .datepicker-inline {
@@ -66,9 +144,13 @@
     bottom: 0 !important;
     left: 0 !important;
     overflow: hidden;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
 
     .drp-buttons {
       display: none;
     }
   }
 }
+

@@ -56,10 +56,11 @@
     padding-right: 8%;
   }
 
-  .input {
+  .form .input {
     border: 1px solid #C8C8C8;
     box-shadow: none;
     margin-bottom: 19px;
+    padding: 19px 23px;
   }
 
   .fieldboxes {
@@ -135,11 +136,6 @@
         padding-right: 0;
       }
     }
-    #angebotFrom,
-    #from{
-      margin-right: 10px;
-    }
-
   }
 }
 
@@ -174,17 +170,5 @@
       display: block;
     }
 
-    #angebotFrom,
-    #from {
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
-    .ui-datepicker-inline.ui-datepicker,
-    #angebotFrom,
-    #angebotTo,
-    #from,
-    #to {
-      max-width: 450px;
-    }
   }
 }
